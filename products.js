@@ -66,7 +66,7 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-    "no-mutation": [8000, 2]
+    "no-mutation": [8000, 0]
       },
       semi_huge: {
 
