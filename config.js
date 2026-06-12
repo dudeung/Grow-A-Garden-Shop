@@ -16,8 +16,8 @@ const STORE_CONFIG = {
 
   // Angka unik checkout. Contoh subtotal 24.000 + 12 = 24.012
   uniqueNumber: {
-    min: 11,
-    max: 99
+    min: 1,
+    max: 25
   },
 
   // Banner slider. Ukuran banner terbaik: 1200 x 500 px.
@@ -31,5 +31,5 @@ const STORE_CONFIG = {
   ],
 
   // Top 3 terlaris. Isi pakai id pet dari products.js
-  topSellers: ["mimic-octopus", "raccoon", "kitsune"]
+  topSellers: ["mimic-octopus", "peacock", "raccoon"]
 };
