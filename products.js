@@ -49,19 +49,76 @@ const PRODUCTS = [
     badge: "Legendary",
     stock: stock({
       polosan: {
-        mega: [10000, 5],
-        rainbow: [13000, 2],
-        "ever-venom": [15000, 2]
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       },
       semi_huge: {
-        mega: [19000, 3],
-        nightmare: [22000, 2],
-        ember: [24000, 1]
+        "ever-venom": [19000, 0],
+        "nightmare": [19000, 0],
+        "mega": [19000, 0],
+        "rainbow": [19000, 0],
+        "giant-golem": [19000, 0],
+        "ember": [19000, 0],
+        "no-mutation": [19000, 0]
       },
       huge: {
-        mega: [36000, 2],
-        "ever-venom": [40000, 2],
-        "giant-golem": [45000, 1]
+        "ever-venom": [36000, 0],
+        "nightmare": [36000, 0],
+        "mega": [36000, 0],
+        "rainbow": [36000, 0],
+        "giant-golem": [36000, 0],
+        "ember": [36000, 0],
+        "no-mutation": [36000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -72,19 +129,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [11500, 6],
-        rainbow: [14500, 3],
-        "ever-venom": [16500, 3]
+        "ever-venom": [11500, 0],
+        "nightmare": [11500, 0],
+        "mega": [11500, 0],
+        "rainbow": [11500, 0],
+        "giant-golem": [11500, 0],
+        "ember": [11500, 0],
+        "no-mutation": [11500, 0]
       },
       semi_huge: {
-        mega: [20500, 4],
-        nightmare: [23500, 2],
-        ember: [25500, 2]
+        "ever-venom": [20500, 0],
+        "nightmare": [20500, 0],
+        "mega": [20500, 0],
+        "rainbow": [20500, 0],
+        "giant-golem": [20500, 0],
+        "ember": [20500, 0],
+        "no-mutation": [20500, 0]
       },
       huge: {
-        mega: [37500, 3],
-        "ever-venom": [41500, 3],
-        "giant-golem": [46500, 1]
+        "ever-venom": [37500, 0],
+        "nightmare": [37500, 0],
+        "mega": [37500, 0],
+        "rainbow": [37500, 0],
+        "giant-golem": [37500, 0],
+        "ember": [37500, 0],
+        "no-mutation": [37500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -95,19 +209,76 @@ const PRODUCTS = [
     badge: "Prismatic",
     stock: stock({
       polosan: {
-        mega: [13000, 7],
-        rainbow: [16000, 4],
-        "ever-venom": [18000, 2]
+        "ever-venom": [13000, 0],
+        "nightmare": [13000, 0],
+        "mega": [13000, 0],
+        "rainbow": [13000, 0],
+        "giant-golem": [13000, 0],
+        "ember": [13000, 0],
+        "no-mutation": [13000, 0]
       },
       semi_huge: {
-        mega: [22000, 5],
-        nightmare: [25000, 2],
-        ember: [27000, 1]
+        "ever-venom": [22000, 0],
+        "nightmare": [22000, 0],
+        "mega": [22000, 0],
+        "rainbow": [22000, 0],
+        "giant-golem": [22000, 0],
+        "ember": [22000, 0],
+        "no-mutation": [22000, 0]
       },
       huge: {
-        mega: [39000, 4],
-        "ever-venom": [43000, 2],
-        "giant-golem": [48000, 1]
+        "ever-venom": [39000, 0],
+        "nightmare": [39000, 0],
+        "mega": [39000, 0],
+        "rainbow": [39000, 0],
+        "giant-golem": [39000, 0],
+        "ember": [39000, 0],
+        "no-mutation": [39000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -118,19 +289,76 @@ const PRODUCTS = [
     badge: "Mythical",
     stock: stock({
       polosan: {
-        mega: [14500, 8],
-        rainbow: [17500, 2],
-        "ever-venom": [19500, 3]
+        "ever-venom": [14500, 0],
+        "nightmare": [14500, 0],
+        "mega": [14500, 0],
+        "rainbow": [14500, 0],
+        "giant-golem": [14500, 0],
+        "ember": [14500, 0],
+        "no-mutation": [14500, 0]
       },
       semi_huge: {
-        mega: [23500, 3],
-        nightmare: [26500, 2],
-        ember: [28500, 2]
+        "ever-venom": [23500, 0],
+        "nightmare": [23500, 0],
+        "mega": [23500, 0],
+        "rainbow": [23500, 0],
+        "giant-golem": [23500, 0],
+        "ember": [23500, 0],
+        "no-mutation": [23500, 0]
       },
       huge: {
-        mega: [40500, 2],
-        "ever-venom": [44500, 3],
-        "giant-golem": [49500, 1]
+        "ever-venom": [40500, 0],
+        "nightmare": [40500, 0],
+        "mega": [40500, 0],
+        "rainbow": [40500, 0],
+        "giant-golem": [40500, 0],
+        "ember": [40500, 0],
+        "no-mutation": [40500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -141,19 +369,76 @@ const PRODUCTS = [
     badge: "Mythical",
     stock: stock({
       polosan: {
-        mega: [16000, 5],
-        rainbow: [19000, 3],
-        "ever-venom": [21000, 2]
+        "ever-venom": [16000, 0],
+        "nightmare": [16000, 0],
+        "mega": [16000, 0],
+        "rainbow": [16000, 0],
+        "giant-golem": [16000, 0],
+        "ember": [16000, 0],
+        "no-mutation": [16000, 0]
       },
       semi_huge: {
-        mega: [25000, 4],
-        nightmare: [28000, 2],
-        ember: [30000, 1]
+        "ever-venom": [25000, 0],
+        "nightmare": [25000, 0],
+        "mega": [25000, 0],
+        "rainbow": [25000, 0],
+        "giant-golem": [25000, 0],
+        "ember": [25000, 0],
+        "no-mutation": [25000, 0]
       },
       huge: {
-        mega: [42000, 3],
-        "ever-venom": [46000, 2],
-        "giant-golem": [51000, 1]
+        "ever-venom": [42000, 0],
+        "nightmare": [42000, 0],
+        "mega": [42000, 0],
+        "rainbow": [42000, 0],
+        "giant-golem": [42000, 0],
+        "ember": [42000, 0],
+        "no-mutation": [42000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -164,19 +449,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [17500, 6],
-        rainbow: [20500, 4],
-        "ever-venom": [22500, 3]
+        "ever-venom": [17500, 0],
+        "nightmare": [17500, 0],
+        "mega": [17500, 0],
+        "rainbow": [17500, 0],
+        "giant-golem": [17500, 0],
+        "ember": [17500, 0],
+        "no-mutation": [17500, 0]
       },
       semi_huge: {
-        mega: [26500, 5],
-        nightmare: [29500, 2],
-        ember: [31500, 2]
+        "ever-venom": [26500, 0],
+        "nightmare": [26500, 0],
+        "mega": [26500, 0],
+        "rainbow": [26500, 0],
+        "giant-golem": [26500, 0],
+        "ember": [26500, 0],
+        "no-mutation": [26500, 0]
       },
       huge: {
-        mega: [43500, 4],
-        "ever-venom": [47500, 3],
-        "giant-golem": [52500, 1]
+        "ever-venom": [43500, 0],
+        "nightmare": [43500, 0],
+        "mega": [43500, 0],
+        "rainbow": [43500, 0],
+        "giant-golem": [43500, 0],
+        "ember": [43500, 0],
+        "no-mutation": [43500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -187,35 +529,76 @@ const PRODUCTS = [
     badge: "Prismatic",
     stock: stock({
       polosan: {
-        mega: [24000, 7],
-        rainbow: [27000, 2],
-        "ever-venom": [29000, 2]
+        "ever-venom": [24000, 0],
+        "nightmare": [24000, 0],
+        "mega": [24000, 0],
+        "rainbow": [24000, 0],
+        "giant-golem": [24000, 0],
+        "ember": [24000, 0],
+        "no-mutation": [24000, 0]
       },
       semi_huge: {
-        mega: [33000, 3],
-        nightmare: [36000, 2],
-        ember: [38000, 1]
+        "ever-venom": [33000, 0],
+        "nightmare": [33000, 0],
+        "mega": [33000, 0],
+        "rainbow": [33000, 0],
+        "giant-golem": [33000, 0],
+        "ember": [33000, 0],
+        "no-mutation": [33000, 0]
       },
       huge: {
-        mega: [50000, 2],
-        "ever-venom": [54000, 2],
-        "giant-golem": [59000, 1]
+        "ever-venom": [50000, 0],
+        "nightmare": [50000, 0],
+        "mega": [50000, 0],
+        "rainbow": [50000, 0],
+        "giant-golem": [50000, 0],
+        "ember": [50000, 0],
+        "no-mutation": [50000, 0]
       },
       titanic_70: {
-        mega: [89000, 1],
-        "ever-venom": [94000, 1]
+        "ever-venom": [89000, 0],
+        "nightmare": [89000, 0],
+        "mega": [89000, 0],
+        "rainbow": [89000, 0],
+        "giant-golem": [89000, 0],
+        "ember": [89000, 0],
+        "no-mutation": [89000, 0]
       },
       titanic_80: {
-        mega: [109000, 1]
+        "ever-venom": [109000, 0],
+        "nightmare": [109000, 0],
+        "mega": [109000, 0],
+        "rainbow": [109000, 0],
+        "giant-golem": [109000, 0],
+        "ember": [109000, 0],
+        "no-mutation": [109000, 0]
       },
       titanic_90: {
-        nightmare: [129000, 1]
+        "ever-venom": [129000, 0],
+        "nightmare": [129000, 0],
+        "mega": [129000, 0],
+        "rainbow": [129000, 0],
+        "giant-golem": [129000, 0],
+        "ember": [129000, 0],
+        "no-mutation": [129000, 0]
       },
       titanic_100: {
-        rainbow: [154000, 0]
+        "ever-venom": [154000, 0],
+        "nightmare": [154000, 0],
+        "mega": [154000, 0],
+        "rainbow": [154000, 0],
+        "giant-golem": [154000, 0],
+        "ember": [154000, 0],
+        "no-mutation": [154000, 0]
       },
       titanic_110: {
-        ember: [184000, 0]
+        "ever-venom": [184000, 0],
+        "nightmare": [184000, 0],
+        "mega": [184000, 0],
+        "rainbow": [184000, 0],
+        "giant-golem": [184000, 0],
+        "ember": [184000, 0],
+        "no-mutation": [184000, 0]
       }
     })
   },
@@ -226,19 +609,76 @@ const PRODUCTS = [
     badge: "Mythical",
     stock: stock({
       polosan: {
-        mega: [11500, 8],
-        rainbow: [14500, 3],
-        "ever-venom": [16500, 3]
+        "ever-venom": [11500, 0],
+        "nightmare": [11500, 0],
+        "mega": [11500, 0],
+        "rainbow": [11500, 0],
+        "giant-golem": [11500, 0],
+        "ember": [11500, 0],
+        "no-mutation": [11500, 0]
       },
       semi_huge: {
-        mega: [20500, 4],
-        nightmare: [23500, 2],
-        ember: [25500, 2]
+        "ever-venom": [20500, 0],
+        "nightmare": [20500, 0],
+        "mega": [20500, 0],
+        "rainbow": [20500, 0],
+        "giant-golem": [20500, 0],
+        "ember": [20500, 0],
+        "no-mutation": [20500, 0]
       },
       huge: {
-        mega: [37500, 3],
-        "ever-venom": [41500, 3],
-        "giant-golem": [46500, 1]
+        "ever-venom": [37500, 0],
+        "nightmare": [37500, 0],
+        "mega": [37500, 0],
+        "rainbow": [37500, 0],
+        "giant-golem": [37500, 0],
+        "ember": [37500, 0],
+        "no-mutation": [37500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -249,19 +689,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [18000, 5],
-        rainbow: [21000, 4],
-        "ever-venom": [23000, 2]
+        "ever-venom": [18000, 0],
+        "nightmare": [18000, 0],
+        "mega": [18000, 0],
+        "rainbow": [18000, 0],
+        "giant-golem": [18000, 0],
+        "ember": [18000, 0],
+        "no-mutation": [18000, 0]
       },
       semi_huge: {
-        mega: [27000, 5],
-        nightmare: [30000, 2],
-        ember: [32000, 1]
+        "ever-venom": [27000, 0],
+        "nightmare": [27000, 0],
+        "mega": [27000, 0],
+        "rainbow": [27000, 0],
+        "giant-golem": [27000, 0],
+        "ember": [27000, 0],
+        "no-mutation": [27000, 0]
       },
       huge: {
-        mega: [44000, 4],
-        "ever-venom": [48000, 2],
-        "giant-golem": [53000, 1]
+        "ever-venom": [44000, 0],
+        "nightmare": [44000, 0],
+        "mega": [44000, 0],
+        "rainbow": [44000, 0],
+        "giant-golem": [44000, 0],
+        "ember": [44000, 0],
+        "no-mutation": [44000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -272,19 +769,76 @@ const PRODUCTS = [
     badge: "Mythical",
     stock: stock({
       polosan: {
-        mega: [14500, 6],
-        rainbow: [17500, 2],
-        "ever-venom": [19500, 3]
+        "ever-venom": [14500, 0],
+        "nightmare": [14500, 0],
+        "mega": [14500, 0],
+        "rainbow": [14500, 0],
+        "giant-golem": [14500, 0],
+        "ember": [14500, 0],
+        "no-mutation": [14500, 0]
       },
       semi_huge: {
-        mega: [23500, 3],
-        nightmare: [26500, 2],
-        ember: [28500, 2]
+        "ever-venom": [23500, 0],
+        "nightmare": [23500, 0],
+        "mega": [23500, 0],
+        "rainbow": [23500, 0],
+        "giant-golem": [23500, 0],
+        "ember": [23500, 0],
+        "no-mutation": [23500, 0]
       },
       huge: {
-        mega: [40500, 2],
-        "ever-venom": [44500, 3],
-        "giant-golem": [49500, 1]
+        "ever-venom": [40500, 0],
+        "nightmare": [40500, 0],
+        "mega": [40500, 0],
+        "rainbow": [40500, 0],
+        "giant-golem": [40500, 0],
+        "ember": [40500, 0],
+        "no-mutation": [40500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -295,19 +849,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [16000, 7],
-        rainbow: [19000, 3],
-        "ever-venom": [21000, 2]
+        "ever-venom": [16000, 0],
+        "nightmare": [16000, 0],
+        "mega": [16000, 0],
+        "rainbow": [16000, 0],
+        "giant-golem": [16000, 0],
+        "ember": [16000, 0],
+        "no-mutation": [16000, 0]
       },
       semi_huge: {
-        mega: [25000, 4],
-        nightmare: [28000, 2],
-        ember: [30000, 1]
+        "ever-venom": [25000, 0],
+        "nightmare": [25000, 0],
+        "mega": [25000, 0],
+        "rainbow": [25000, 0],
+        "giant-golem": [25000, 0],
+        "ember": [25000, 0],
+        "no-mutation": [25000, 0]
       },
       huge: {
-        mega: [42000, 3],
-        "ever-venom": [46000, 2],
-        "giant-golem": [51000, 1]
+        "ever-venom": [42000, 0],
+        "nightmare": [42000, 0],
+        "mega": [42000, 0],
+        "rainbow": [42000, 0],
+        "giant-golem": [42000, 0],
+        "ember": [42000, 0],
+        "no-mutation": [42000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -318,35 +929,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [21000, 8],
-        rainbow: [24000, 4],
-        "ever-venom": [26000, 3]
+        "ever-venom": [21000, 0],
+        "nightmare": [21000, 0],
+        "mega": [21000, 0],
+        "rainbow": [21000, 0],
+        "giant-golem": [21000, 0],
+        "ember": [21000, 0],
+        "no-mutation": [21000, 0]
       },
       semi_huge: {
-        mega: [30000, 5],
-        nightmare: [33000, 2],
-        ember: [35000, 2]
+        "ever-venom": [30000, 0],
+        "nightmare": [30000, 0],
+        "mega": [30000, 0],
+        "rainbow": [30000, 0],
+        "giant-golem": [30000, 0],
+        "ember": [30000, 0],
+        "no-mutation": [30000, 0]
       },
       huge: {
-        mega: [47000, 4],
-        "ever-venom": [51000, 3],
-        "giant-golem": [56000, 1]
+        "ever-venom": [47000, 0],
+        "nightmare": [47000, 0],
+        "mega": [47000, 0],
+        "rainbow": [47000, 0],
+        "giant-golem": [47000, 0],
+        "ember": [47000, 0],
+        "no-mutation": [47000, 0]
       },
       titanic_70: {
-        mega: [86000, 2],
-        "ever-venom": [91000, 1]
+        "ever-venom": [86000, 0],
+        "nightmare": [86000, 0],
+        "mega": [86000, 0],
+        "rainbow": [86000, 0],
+        "giant-golem": [86000, 0],
+        "ember": [86000, 0],
+        "no-mutation": [86000, 0]
       },
       titanic_80: {
-        mega: [106000, 1]
+        "ever-venom": [106000, 0],
+        "nightmare": [106000, 0],
+        "mega": [106000, 0],
+        "rainbow": [106000, 0],
+        "giant-golem": [106000, 0],
+        "ember": [106000, 0],
+        "no-mutation": [106000, 0]
       },
       titanic_90: {
-        nightmare: [126000, 1]
+        "ever-venom": [126000, 0],
+        "nightmare": [126000, 0],
+        "mega": [126000, 0],
+        "rainbow": [126000, 0],
+        "giant-golem": [126000, 0],
+        "ember": [126000, 0],
+        "no-mutation": [126000, 0]
       },
       titanic_100: {
-        rainbow: [151000, 0]
+        "ever-venom": [151000, 0],
+        "nightmare": [151000, 0],
+        "mega": [151000, 0],
+        "rainbow": [151000, 0],
+        "giant-golem": [151000, 0],
+        "ember": [151000, 0],
+        "no-mutation": [151000, 0]
       },
       titanic_110: {
-        ember: [181000, 0]
+        "ever-venom": [181000, 0],
+        "nightmare": [181000, 0],
+        "mega": [181000, 0],
+        "rainbow": [181000, 0],
+        "giant-golem": [181000, 0],
+        "ember": [181000, 0],
+        "no-mutation": [181000, 0]
       }
     })
   },
@@ -357,19 +1009,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [10000, 5],
-        rainbow: [13000, 2],
-        "ever-venom": [15000, 2]
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       },
       semi_huge: {
-        mega: [19000, 3],
-        nightmare: [22000, 2],
-        ember: [24000, 1]
+        "ever-venom": [19000, 0],
+        "nightmare": [19000, 0],
+        "mega": [19000, 0],
+        "rainbow": [19000, 0],
+        "giant-golem": [19000, 0],
+        "ember": [19000, 0],
+        "no-mutation": [19000, 0]
       },
       huge: {
-        mega: [36000, 2],
-        "ever-venom": [40000, 2],
-        "giant-golem": [45000, 1]
+        "ever-venom": [36000, 0],
+        "nightmare": [36000, 0],
+        "mega": [36000, 0],
+        "rainbow": [36000, 0],
+        "giant-golem": [36000, 0],
+        "ember": [36000, 0],
+        "no-mutation": [36000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -380,19 +1089,76 @@ const PRODUCTS = [
     badge: "Mythical",
     stock: stock({
       polosan: {
-        mega: [11500, 6],
-        rainbow: [14500, 3],
-        "ever-venom": [16500, 3]
+        "ever-venom": [11500, 0],
+        "nightmare": [11500, 0],
+        "mega": [11500, 0],
+        "rainbow": [11500, 0],
+        "giant-golem": [11500, 0],
+        "ember": [11500, 0],
+        "no-mutation": [11500, 0]
       },
       semi_huge: {
-        mega: [20500, 4],
-        nightmare: [23500, 2],
-        ember: [25500, 2]
+        "ever-venom": [20500, 0],
+        "nightmare": [20500, 0],
+        "mega": [20500, 0],
+        "rainbow": [20500, 0],
+        "giant-golem": [20500, 0],
+        "ember": [20500, 0],
+        "no-mutation": [20500, 0]
       },
       huge: {
-        mega: [37500, 3],
-        "ever-venom": [41500, 3],
-        "giant-golem": [46500, 1]
+        "ever-venom": [37500, 0],
+        "nightmare": [37500, 0],
+        "mega": [37500, 0],
+        "rainbow": [37500, 0],
+        "giant-golem": [37500, 0],
+        "ember": [37500, 0],
+        "no-mutation": [37500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -403,19 +1169,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [13000, 7],
-        rainbow: [16000, 4],
-        "ever-venom": [18000, 2]
+        "ever-venom": [13000, 0],
+        "nightmare": [13000, 0],
+        "mega": [13000, 0],
+        "rainbow": [13000, 0],
+        "giant-golem": [13000, 0],
+        "ember": [13000, 0],
+        "no-mutation": [13000, 0]
       },
       semi_huge: {
-        mega: [22000, 5],
-        nightmare: [25000, 2],
-        ember: [27000, 1]
+        "ever-venom": [22000, 0],
+        "nightmare": [22000, 0],
+        "mega": [22000, 0],
+        "rainbow": [22000, 0],
+        "giant-golem": [22000, 0],
+        "ember": [22000, 0],
+        "no-mutation": [22000, 0]
       },
       huge: {
-        mega: [39000, 4],
-        "ever-venom": [43000, 2],
-        "giant-golem": [48000, 1]
+        "ever-venom": [39000, 0],
+        "nightmare": [39000, 0],
+        "mega": [39000, 0],
+        "rainbow": [39000, 0],
+        "giant-golem": [39000, 0],
+        "ember": [39000, 0],
+        "no-mutation": [39000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -426,19 +1249,76 @@ const PRODUCTS = [
     badge: "Prismatic",
     stock: stock({
       polosan: {
-        mega: [14500, 8],
-        rainbow: [17500, 2],
-        "ever-venom": [19500, 3]
+        "ever-venom": [14500, 0],
+        "nightmare": [14500, 0],
+        "mega": [14500, 0],
+        "rainbow": [14500, 0],
+        "giant-golem": [14500, 0],
+        "ember": [14500, 0],
+        "no-mutation": [14500, 0]
       },
       semi_huge: {
-        mega: [23500, 3],
-        nightmare: [26500, 2],
-        ember: [28500, 2]
+        "ever-venom": [23500, 0],
+        "nightmare": [23500, 0],
+        "mega": [23500, 0],
+        "rainbow": [23500, 0],
+        "giant-golem": [23500, 0],
+        "ember": [23500, 0],
+        "no-mutation": [23500, 0]
       },
       huge: {
-        mega: [40500, 2],
-        "ever-venom": [44500, 3],
-        "giant-golem": [49500, 1]
+        "ever-venom": [40500, 0],
+        "nightmare": [40500, 0],
+        "mega": [40500, 0],
+        "rainbow": [40500, 0],
+        "giant-golem": [40500, 0],
+        "ember": [40500, 0],
+        "no-mutation": [40500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -449,19 +1329,76 @@ const PRODUCTS = [
     badge: "Legendary",
     stock: stock({
       polosan: {
-        mega: [16000, 5],
-        rainbow: [19000, 3],
-        "ever-venom": [21000, 2]
+        "ever-venom": [16000, 0],
+        "nightmare": [16000, 0],
+        "mega": [16000, 0],
+        "rainbow": [16000, 0],
+        "giant-golem": [16000, 0],
+        "ember": [16000, 0],
+        "no-mutation": [16000, 0]
       },
       semi_huge: {
-        mega: [25000, 4],
-        nightmare: [28000, 2],
-        ember: [30000, 1]
+        "ever-venom": [25000, 0],
+        "nightmare": [25000, 0],
+        "mega": [25000, 0],
+        "rainbow": [25000, 0],
+        "giant-golem": [25000, 0],
+        "ember": [25000, 0],
+        "no-mutation": [25000, 0]
       },
       huge: {
-        mega: [42000, 3],
-        "ever-venom": [46000, 2],
-        "giant-golem": [51000, 1]
+        "ever-venom": [42000, 0],
+        "nightmare": [42000, 0],
+        "mega": [42000, 0],
+        "rainbow": [42000, 0],
+        "giant-golem": [42000, 0],
+        "ember": [42000, 0],
+        "no-mutation": [42000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -472,19 +1409,76 @@ const PRODUCTS = [
     badge: "Prismatic",
     stock: stock({
       polosan: {
-        mega: [17500, 6],
-        rainbow: [20500, 4],
-        "ever-venom": [22500, 3]
+        "ever-venom": [17500, 0],
+        "nightmare": [17500, 0],
+        "mega": [17500, 0],
+        "rainbow": [17500, 0],
+        "giant-golem": [17500, 0],
+        "ember": [17500, 0],
+        "no-mutation": [17500, 0]
       },
       semi_huge: {
-        mega: [26500, 5],
-        nightmare: [29500, 2],
-        ember: [31500, 2]
+        "ever-venom": [26500, 0],
+        "nightmare": [26500, 0],
+        "mega": [26500, 0],
+        "rainbow": [26500, 0],
+        "giant-golem": [26500, 0],
+        "ember": [26500, 0],
+        "no-mutation": [26500, 0]
       },
       huge: {
-        mega: [43500, 4],
-        "ever-venom": [47500, 3],
-        "giant-golem": [52500, 1]
+        "ever-venom": [43500, 0],
+        "nightmare": [43500, 0],
+        "mega": [43500, 0],
+        "rainbow": [43500, 0],
+        "giant-golem": [43500, 0],
+        "ember": [43500, 0],
+        "no-mutation": [43500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -495,35 +1489,76 @@ const PRODUCTS = [
     badge: "Prismatic",
     stock: stock({
       polosan: {
-        mega: [20000, 7],
-        rainbow: [23000, 2],
-        "ever-venom": [25000, 2]
+        "ever-venom": [20000, 0],
+        "nightmare": [20000, 0],
+        "mega": [20000, 0],
+        "rainbow": [20000, 0],
+        "giant-golem": [20000, 0],
+        "ember": [20000, 0],
+        "no-mutation": [20000, 0]
       },
       semi_huge: {
-        mega: [29000, 3],
-        nightmare: [32000, 2],
-        ember: [34000, 1]
+        "ever-venom": [29000, 0],
+        "nightmare": [29000, 0],
+        "mega": [29000, 0],
+        "rainbow": [29000, 0],
+        "giant-golem": [29000, 0],
+        "ember": [29000, 0],
+        "no-mutation": [29000, 0]
       },
       huge: {
-        mega: [46000, 2],
-        "ever-venom": [50000, 2],
-        "giant-golem": [55000, 1]
+        "ever-venom": [46000, 0],
+        "nightmare": [46000, 0],
+        "mega": [46000, 0],
+        "rainbow": [46000, 0],
+        "giant-golem": [46000, 0],
+        "ember": [46000, 0],
+        "no-mutation": [46000, 0]
       },
       titanic_70: {
-        mega: [85000, 1],
-        "ever-venom": [90000, 1]
+        "ever-venom": [85000, 0],
+        "nightmare": [85000, 0],
+        "mega": [85000, 0],
+        "rainbow": [85000, 0],
+        "giant-golem": [85000, 0],
+        "ember": [85000, 0],
+        "no-mutation": [85000, 0]
       },
       titanic_80: {
-        mega: [105000, 1]
+        "ever-venom": [105000, 0],
+        "nightmare": [105000, 0],
+        "mega": [105000, 0],
+        "rainbow": [105000, 0],
+        "giant-golem": [105000, 0],
+        "ember": [105000, 0],
+        "no-mutation": [105000, 0]
       },
       titanic_90: {
-        nightmare: [125000, 1]
+        "ever-venom": [125000, 0],
+        "nightmare": [125000, 0],
+        "mega": [125000, 0],
+        "rainbow": [125000, 0],
+        "giant-golem": [125000, 0],
+        "ember": [125000, 0],
+        "no-mutation": [125000, 0]
       },
       titanic_100: {
-        rainbow: [150000, 0]
+        "ever-venom": [150000, 0],
+        "nightmare": [150000, 0],
+        "mega": [150000, 0],
+        "rainbow": [150000, 0],
+        "giant-golem": [150000, 0],
+        "ember": [150000, 0],
+        "no-mutation": [150000, 0]
       },
       titanic_110: {
-        ember: [180000, 0]
+        "ever-venom": [180000, 0],
+        "nightmare": [180000, 0],
+        "mega": [180000, 0],
+        "rainbow": [180000, 0],
+        "giant-golem": [180000, 0],
+        "ember": [180000, 0],
+        "no-mutation": [180000, 0]
       }
     })
   },
@@ -534,19 +1569,76 @@ const PRODUCTS = [
     badge: "Mythical",
     stock: stock({
       polosan: {
-        mega: [11500, 8],
-        rainbow: [14500, 3],
-        "ever-venom": [16500, 3]
+        "ever-venom": [11500, 0],
+        "nightmare": [11500, 0],
+        "mega": [11500, 0],
+        "rainbow": [11500, 0],
+        "giant-golem": [11500, 0],
+        "ember": [11500, 0],
+        "no-mutation": [11500, 0]
       },
       semi_huge: {
-        mega: [20500, 4],
-        nightmare: [23500, 2],
-        ember: [25500, 2]
+        "ever-venom": [20500, 0],
+        "nightmare": [20500, 0],
+        "mega": [20500, 0],
+        "rainbow": [20500, 0],
+        "giant-golem": [20500, 0],
+        "ember": [20500, 0],
+        "no-mutation": [20500, 0]
       },
       huge: {
-        mega: [37500, 3],
-        "ever-venom": [41500, 3],
-        "giant-golem": [46500, 1]
+        "ever-venom": [37500, 0],
+        "nightmare": [37500, 0],
+        "mega": [37500, 0],
+        "rainbow": [37500, 0],
+        "giant-golem": [37500, 0],
+        "ember": [37500, 0],
+        "no-mutation": [37500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -557,19 +1649,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [13000, 5],
-        rainbow: [16000, 4],
-        "ever-venom": [18000, 2]
+        "ever-venom": [13000, 0],
+        "nightmare": [13000, 0],
+        "mega": [13000, 0],
+        "rainbow": [13000, 0],
+        "giant-golem": [13000, 0],
+        "ember": [13000, 0],
+        "no-mutation": [13000, 0]
       },
       semi_huge: {
-        mega: [22000, 5],
-        nightmare: [25000, 2],
-        ember: [27000, 1]
+        "ever-venom": [22000, 0],
+        "nightmare": [22000, 0],
+        "mega": [22000, 0],
+        "rainbow": [22000, 0],
+        "giant-golem": [22000, 0],
+        "ember": [22000, 0],
+        "no-mutation": [22000, 0]
       },
       huge: {
-        mega: [39000, 4],
-        "ever-venom": [43000, 2],
-        "giant-golem": [48000, 1]
+        "ever-venom": [39000, 0],
+        "nightmare": [39000, 0],
+        "mega": [39000, 0],
+        "rainbow": [39000, 0],
+        "giant-golem": [39000, 0],
+        "ember": [39000, 0],
+        "no-mutation": [39000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -580,19 +1729,76 @@ const PRODUCTS = [
     badge: "Legendary",
     stock: stock({
       polosan: {
-        mega: [14500, 6],
-        rainbow: [17500, 2],
-        "ever-venom": [19500, 3]
+        "ever-venom": [14500, 0],
+        "nightmare": [14500, 0],
+        "mega": [14500, 0],
+        "rainbow": [14500, 0],
+        "giant-golem": [14500, 0],
+        "ember": [14500, 0],
+        "no-mutation": [14500, 0]
       },
       semi_huge: {
-        mega: [23500, 3],
-        nightmare: [26500, 2],
-        ember: [28500, 2]
+        "ever-venom": [23500, 0],
+        "nightmare": [23500, 0],
+        "mega": [23500, 0],
+        "rainbow": [23500, 0],
+        "giant-golem": [23500, 0],
+        "ember": [23500, 0],
+        "no-mutation": [23500, 0]
       },
       huge: {
-        mega: [40500, 2],
-        "ever-venom": [44500, 3],
-        "giant-golem": [49500, 1]
+        "ever-venom": [40500, 0],
+        "nightmare": [40500, 0],
+        "mega": [40500, 0],
+        "rainbow": [40500, 0],
+        "giant-golem": [40500, 0],
+        "ember": [40500, 0],
+        "no-mutation": [40500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -603,35 +1809,76 @@ const PRODUCTS = [
     badge: "Mythical",
     stock: stock({
       polosan: {
-        mega: [24000, 7],
-        rainbow: [27000, 3],
-        "ever-venom": [29000, 2]
+        "ever-venom": [24000, 0],
+        "nightmare": [24000, 0],
+        "mega": [24000, 0],
+        "rainbow": [24000, 0],
+        "giant-golem": [24000, 0],
+        "ember": [24000, 0],
+        "no-mutation": [24000, 0]
       },
       semi_huge: {
-        mega: [33000, 4],
-        nightmare: [36000, 2],
-        ember: [38000, 1]
+        "ever-venom": [33000, 0],
+        "nightmare": [33000, 0],
+        "mega": [33000, 0],
+        "rainbow": [33000, 0],
+        "giant-golem": [33000, 0],
+        "ember": [33000, 0],
+        "no-mutation": [33000, 0]
       },
       huge: {
-        mega: [50000, 3],
-        "ever-venom": [54000, 2],
-        "giant-golem": [59000, 1]
+        "ever-venom": [50000, 0],
+        "nightmare": [50000, 0],
+        "mega": [50000, 0],
+        "rainbow": [50000, 0],
+        "giant-golem": [50000, 0],
+        "ember": [50000, 0],
+        "no-mutation": [50000, 0]
       },
       titanic_70: {
-        mega: [89000, 1],
-        "ever-venom": [94000, 1]
+        "ever-venom": [89000, 0],
+        "nightmare": [89000, 0],
+        "mega": [89000, 0],
+        "rainbow": [89000, 0],
+        "giant-golem": [89000, 0],
+        "ember": [89000, 0],
+        "no-mutation": [89000, 0]
       },
       titanic_80: {
-        mega: [109000, 1]
+        "ever-venom": [109000, 0],
+        "nightmare": [109000, 0],
+        "mega": [109000, 0],
+        "rainbow": [109000, 0],
+        "giant-golem": [109000, 0],
+        "ember": [109000, 0],
+        "no-mutation": [109000, 0]
       },
       titanic_90: {
-        nightmare: [129000, 1]
+        "ever-venom": [129000, 0],
+        "nightmare": [129000, 0],
+        "mega": [129000, 0],
+        "rainbow": [129000, 0],
+        "giant-golem": [129000, 0],
+        "ember": [129000, 0],
+        "no-mutation": [129000, 0]
       },
       titanic_100: {
-        rainbow: [154000, 0]
+        "ever-venom": [154000, 0],
+        "nightmare": [154000, 0],
+        "mega": [154000, 0],
+        "rainbow": [154000, 0],
+        "giant-golem": [154000, 0],
+        "ember": [154000, 0],
+        "no-mutation": [154000, 0]
       },
       titanic_110: {
-        ember: [184000, 0]
+        "ever-venom": [184000, 0],
+        "nightmare": [184000, 0],
+        "mega": [184000, 0],
+        "rainbow": [184000, 0],
+        "giant-golem": [184000, 0],
+        "ember": [184000, 0],
+        "no-mutation": [184000, 0]
       }
     })
   },
@@ -642,19 +1889,76 @@ const PRODUCTS = [
     badge: "Legendary",
     stock: stock({
       polosan: {
-        mega: [17500, 8],
-        rainbow: [20500, 4],
-        "ever-venom": [22500, 3]
+        "ever-venom": [17500, 0],
+        "nightmare": [17500, 0],
+        "mega": [17500, 0],
+        "rainbow": [17500, 0],
+        "giant-golem": [17500, 0],
+        "ember": [17500, 0],
+        "no-mutation": [17500, 0]
       },
       semi_huge: {
-        mega: [26500, 5],
-        nightmare: [29500, 2],
-        ember: [31500, 2]
+        "ever-venom": [26500, 0],
+        "nightmare": [26500, 0],
+        "mega": [26500, 0],
+        "rainbow": [26500, 0],
+        "giant-golem": [26500, 0],
+        "ember": [26500, 0],
+        "no-mutation": [26500, 0]
       },
       huge: {
-        mega: [43500, 4],
-        "ever-venom": [47500, 3],
-        "giant-golem": [52500, 1]
+        "ever-venom": [43500, 0],
+        "nightmare": [43500, 0],
+        "mega": [43500, 0],
+        "rainbow": [43500, 0],
+        "giant-golem": [43500, 0],
+        "ember": [43500, 0],
+        "no-mutation": [43500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -665,19 +1969,76 @@ const PRODUCTS = [
     badge: "Legendary",
     stock: stock({
       polosan: {
-        mega: [10000, 5],
-        rainbow: [13000, 2],
-        "ever-venom": [15000, 2]
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       },
       semi_huge: {
-        mega: [19000, 3],
-        nightmare: [22000, 2],
-        ember: [24000, 1]
+        "ever-venom": [19000, 0],
+        "nightmare": [19000, 0],
+        "mega": [19000, 0],
+        "rainbow": [19000, 0],
+        "giant-golem": [19000, 0],
+        "ember": [19000, 0],
+        "no-mutation": [19000, 0]
       },
       huge: {
-        mega: [36000, 2],
-        "ever-venom": [40000, 2],
-        "giant-golem": [45000, 1]
+        "ever-venom": [36000, 0],
+        "nightmare": [36000, 0],
+        "mega": [36000, 0],
+        "rainbow": [36000, 0],
+        "giant-golem": [36000, 0],
+        "ember": [36000, 0],
+        "no-mutation": [36000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -688,35 +2049,76 @@ const PRODUCTS = [
     badge: "Prismatic",
     stock: stock({
       polosan: {
-        mega: [16000, 6],
-        rainbow: [19000, 3],
-        "ever-venom": [21000, 3]
+        "ever-venom": [16000, 0],
+        "nightmare": [16000, 0],
+        "mega": [16000, 0],
+        "rainbow": [16000, 0],
+        "giant-golem": [16000, 0],
+        "ember": [16000, 0],
+        "no-mutation": [16000, 0]
       },
       semi_huge: {
-        mega: [25000, 4],
-        nightmare: [28000, 2],
-        ember: [30000, 2]
+        "ever-venom": [25000, 0],
+        "nightmare": [25000, 0],
+        "mega": [25000, 0],
+        "rainbow": [25000, 0],
+        "giant-golem": [25000, 0],
+        "ember": [25000, 0],
+        "no-mutation": [25000, 0]
       },
       huge: {
-        mega: [42000, 3],
-        "ever-venom": [46000, 3],
-        "giant-golem": [51000, 1]
+        "ever-venom": [42000, 0],
+        "nightmare": [42000, 0],
+        "mega": [42000, 0],
+        "rainbow": [42000, 0],
+        "giant-golem": [42000, 0],
+        "ember": [42000, 0],
+        "no-mutation": [42000, 0]
       },
       titanic_70: {
-        mega: [81000, 2],
-        "ever-venom": [86000, 1]
+        "ever-venom": [81000, 0],
+        "nightmare": [81000, 0],
+        "mega": [81000, 0],
+        "rainbow": [81000, 0],
+        "giant-golem": [81000, 0],
+        "ember": [81000, 0],
+        "no-mutation": [81000, 0]
       },
       titanic_80: {
-        mega: [101000, 1]
+        "ever-venom": [101000, 0],
+        "nightmare": [101000, 0],
+        "mega": [101000, 0],
+        "rainbow": [101000, 0],
+        "giant-golem": [101000, 0],
+        "ember": [101000, 0],
+        "no-mutation": [101000, 0]
       },
       titanic_90: {
-        nightmare: [121000, 1]
+        "ever-venom": [121000, 0],
+        "nightmare": [121000, 0],
+        "mega": [121000, 0],
+        "rainbow": [121000, 0],
+        "giant-golem": [121000, 0],
+        "ember": [121000, 0],
+        "no-mutation": [121000, 0]
       },
       titanic_100: {
-        rainbow: [146000, 0]
+        "ever-venom": [146000, 0],
+        "nightmare": [146000, 0],
+        "mega": [146000, 0],
+        "rainbow": [146000, 0],
+        "giant-golem": [146000, 0],
+        "ember": [146000, 0],
+        "no-mutation": [146000, 0]
       },
       titanic_110: {
-        ember: [176000, 0]
+        "ever-venom": [176000, 0],
+        "nightmare": [176000, 0],
+        "mega": [176000, 0],
+        "rainbow": [176000, 0],
+        "giant-golem": [176000, 0],
+        "ember": [176000, 0],
+        "no-mutation": [176000, 0]
       }
     })
   },
@@ -727,19 +2129,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [13000, 7],
-        rainbow: [16000, 4],
-        "ever-venom": [18000, 2]
+        "ever-venom": [13000, 0],
+        "nightmare": [13000, 0],
+        "mega": [13000, 0],
+        "rainbow": [13000, 0],
+        "giant-golem": [13000, 0],
+        "ember": [13000, 0],
+        "no-mutation": [13000, 0]
       },
       semi_huge: {
-        mega: [22000, 5],
-        nightmare: [25000, 2],
-        ember: [27000, 1]
+        "ever-venom": [22000, 0],
+        "nightmare": [22000, 0],
+        "mega": [22000, 0],
+        "rainbow": [22000, 0],
+        "giant-golem": [22000, 0],
+        "ember": [22000, 0],
+        "no-mutation": [22000, 0]
       },
       huge: {
-        mega: [39000, 4],
-        "ever-venom": [43000, 2],
-        "giant-golem": [48000, 1]
+        "ever-venom": [39000, 0],
+        "nightmare": [39000, 0],
+        "mega": [39000, 0],
+        "rainbow": [39000, 0],
+        "giant-golem": [39000, 0],
+        "ember": [39000, 0],
+        "no-mutation": [39000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -750,35 +2209,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [22000, 8],
-        rainbow: [25000, 2],
-        "ever-venom": [27000, 3]
+        "ever-venom": [22000, 0],
+        "nightmare": [22000, 0],
+        "mega": [22000, 0],
+        "rainbow": [22000, 0],
+        "giant-golem": [22000, 0],
+        "ember": [22000, 0],
+        "no-mutation": [22000, 0]
       },
       semi_huge: {
-        mega: [31000, 3],
-        nightmare: [34000, 2],
-        ember: [36000, 2]
+        "ever-venom": [31000, 0],
+        "nightmare": [31000, 0],
+        "mega": [31000, 0],
+        "rainbow": [31000, 0],
+        "giant-golem": [31000, 0],
+        "ember": [31000, 0],
+        "no-mutation": [31000, 0]
       },
       huge: {
-        mega: [48000, 2],
-        "ever-venom": [52000, 3],
-        "giant-golem": [57000, 1]
+        "ever-venom": [48000, 0],
+        "nightmare": [48000, 0],
+        "mega": [48000, 0],
+        "rainbow": [48000, 0],
+        "giant-golem": [48000, 0],
+        "ember": [48000, 0],
+        "no-mutation": [48000, 0]
       },
       titanic_70: {
-        mega: [87000, 2],
-        "ever-venom": [92000, 1]
+        "ever-venom": [87000, 0],
+        "nightmare": [87000, 0],
+        "mega": [87000, 0],
+        "rainbow": [87000, 0],
+        "giant-golem": [87000, 0],
+        "ember": [87000, 0],
+        "no-mutation": [87000, 0]
       },
       titanic_80: {
-        mega: [107000, 1]
+        "ever-venom": [107000, 0],
+        "nightmare": [107000, 0],
+        "mega": [107000, 0],
+        "rainbow": [107000, 0],
+        "giant-golem": [107000, 0],
+        "ember": [107000, 0],
+        "no-mutation": [107000, 0]
       },
       titanic_90: {
-        nightmare: [127000, 1]
+        "ever-venom": [127000, 0],
+        "nightmare": [127000, 0],
+        "mega": [127000, 0],
+        "rainbow": [127000, 0],
+        "giant-golem": [127000, 0],
+        "ember": [127000, 0],
+        "no-mutation": [127000, 0]
       },
       titanic_100: {
-        rainbow: [152000, 0]
+        "ever-venom": [152000, 0],
+        "nightmare": [152000, 0],
+        "mega": [152000, 0],
+        "rainbow": [152000, 0],
+        "giant-golem": [152000, 0],
+        "ember": [152000, 0],
+        "no-mutation": [152000, 0]
       },
       titanic_110: {
-        ember: [182000, 0]
+        "ever-venom": [182000, 0],
+        "nightmare": [182000, 0],
+        "mega": [182000, 0],
+        "rainbow": [182000, 0],
+        "giant-golem": [182000, 0],
+        "ember": [182000, 0],
+        "no-mutation": [182000, 0]
       }
     })
   },
@@ -789,19 +2289,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [16000, 5],
-        rainbow: [19000, 3],
-        "ever-venom": [21000, 2]
+        "ever-venom": [16000, 0],
+        "nightmare": [16000, 0],
+        "mega": [16000, 0],
+        "rainbow": [16000, 0],
+        "giant-golem": [16000, 0],
+        "ember": [16000, 0],
+        "no-mutation": [16000, 0]
       },
       semi_huge: {
-        mega: [25000, 4],
-        nightmare: [28000, 2],
-        ember: [30000, 1]
+        "ever-venom": [25000, 0],
+        "nightmare": [25000, 0],
+        "mega": [25000, 0],
+        "rainbow": [25000, 0],
+        "giant-golem": [25000, 0],
+        "ember": [25000, 0],
+        "no-mutation": [25000, 0]
       },
       huge: {
-        mega: [42000, 3],
-        "ever-venom": [46000, 2],
-        "giant-golem": [51000, 1]
+        "ever-venom": [42000, 0],
+        "nightmare": [42000, 0],
+        "mega": [42000, 0],
+        "rainbow": [42000, 0],
+        "giant-golem": [42000, 0],
+        "ember": [42000, 0],
+        "no-mutation": [42000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -812,19 +2369,76 @@ const PRODUCTS = [
     badge: "Legendary",
     stock: stock({
       polosan: {
-        mega: [17500, 6],
-        rainbow: [20500, 4],
-        "ever-venom": [22500, 3]
+        "ever-venom": [17500, 0],
+        "nightmare": [17500, 0],
+        "mega": [17500, 0],
+        "rainbow": [17500, 0],
+        "giant-golem": [17500, 0],
+        "ember": [17500, 0],
+        "no-mutation": [17500, 0]
       },
       semi_huge: {
-        mega: [26500, 5],
-        nightmare: [29500, 2],
-        ember: [31500, 2]
+        "ever-venom": [26500, 0],
+        "nightmare": [26500, 0],
+        "mega": [26500, 0],
+        "rainbow": [26500, 0],
+        "giant-golem": [26500, 0],
+        "ember": [26500, 0],
+        "no-mutation": [26500, 0]
       },
       huge: {
-        mega: [43500, 4],
-        "ever-venom": [47500, 3],
-        "giant-golem": [52500, 1]
+        "ever-venom": [43500, 0],
+        "nightmare": [43500, 0],
+        "mega": [43500, 0],
+        "rainbow": [43500, 0],
+        "giant-golem": [43500, 0],
+        "ember": [43500, 0],
+        "no-mutation": [43500, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -835,35 +2449,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [10000, 7],
-        rainbow: [13000, 2],
-        "ever-venom": [15000, 2]
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       },
       semi_huge: {
-        mega: [19000, 3],
-        nightmare: [22000, 2],
-        ember: [24000, 1]
+        "ever-venom": [19000, 0],
+        "nightmare": [19000, 0],
+        "mega": [19000, 0],
+        "rainbow": [19000, 0],
+        "giant-golem": [19000, 0],
+        "ember": [19000, 0],
+        "no-mutation": [19000, 0]
       },
       huge: {
-        mega: [36000, 2],
-        "ever-venom": [40000, 2],
-        "giant-golem": [45000, 1]
+        "ever-venom": [36000, 0],
+        "nightmare": [36000, 0],
+        "mega": [36000, 0],
+        "rainbow": [36000, 0],
+        "giant-golem": [36000, 0],
+        "ember": [36000, 0],
+        "no-mutation": [36000, 0]
       },
       titanic_70: {
-        mega: [75000, 1],
-        "ever-venom": [80000, 1]
+        "ever-venom": [75000, 0],
+        "nightmare": [75000, 0],
+        "mega": [75000, 0],
+        "rainbow": [75000, 0],
+        "giant-golem": [75000, 0],
+        "ember": [75000, 0],
+        "no-mutation": [75000, 0]
       },
       titanic_80: {
-        mega: [95000, 1]
+        "ever-venom": [95000, 0],
+        "nightmare": [95000, 0],
+        "mega": [95000, 0],
+        "rainbow": [95000, 0],
+        "giant-golem": [95000, 0],
+        "ember": [95000, 0],
+        "no-mutation": [95000, 0]
       },
       titanic_90: {
-        nightmare: [115000, 1]
+        "ever-venom": [115000, 0],
+        "nightmare": [115000, 0],
+        "mega": [115000, 0],
+        "rainbow": [115000, 0],
+        "giant-golem": [115000, 0],
+        "ember": [115000, 0],
+        "no-mutation": [115000, 0]
       },
       titanic_100: {
-        rainbow: [140000, 0]
+        "ever-venom": [140000, 0],
+        "nightmare": [140000, 0],
+        "mega": [140000, 0],
+        "rainbow": [140000, 0],
+        "giant-golem": [140000, 0],
+        "ember": [140000, 0],
+        "no-mutation": [140000, 0]
       },
       titanic_110: {
-        ember: [170000, 0]
+        "ever-venom": [170000, 0],
+        "nightmare": [170000, 0],
+        "mega": [170000, 0],
+        "rainbow": [170000, 0],
+        "giant-golem": [170000, 0],
+        "ember": [170000, 0],
+        "no-mutation": [170000, 0]
       }
     })
   },
@@ -874,35 +2529,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [11500, 8],
-        rainbow: [14500, 3],
-        "ever-venom": [16500, 3]
+        "ever-venom": [11500, 0],
+        "nightmare": [11500, 0],
+        "mega": [11500, 0],
+        "rainbow": [11500, 0],
+        "giant-golem": [11500, 0],
+        "ember": [11500, 0],
+        "no-mutation": [11500, 0]
       },
       semi_huge: {
-        mega: [20500, 4],
-        nightmare: [23500, 2],
-        ember: [25500, 2]
+        "ever-venom": [20500, 0],
+        "nightmare": [20500, 0],
+        "mega": [20500, 0],
+        "rainbow": [20500, 0],
+        "giant-golem": [20500, 0],
+        "ember": [20500, 0],
+        "no-mutation": [20500, 0]
       },
       huge: {
-        mega: [37500, 3],
-        "ever-venom": [41500, 3],
-        "giant-golem": [46500, 1]
+        "ever-venom": [37500, 0],
+        "nightmare": [37500, 0],
+        "mega": [37500, 0],
+        "rainbow": [37500, 0],
+        "giant-golem": [37500, 0],
+        "ember": [37500, 0],
+        "no-mutation": [37500, 0]
       },
       titanic_70: {
-        mega: [76500, 2],
-        "ever-venom": [81500, 1]
+        "ever-venom": [76500, 0],
+        "nightmare": [76500, 0],
+        "mega": [76500, 0],
+        "rainbow": [76500, 0],
+        "giant-golem": [76500, 0],
+        "ember": [76500, 0],
+        "no-mutation": [76500, 0]
       },
       titanic_80: {
-        mega: [96500, 1]
+        "ever-venom": [96500, 0],
+        "nightmare": [96500, 0],
+        "mega": [96500, 0],
+        "rainbow": [96500, 0],
+        "giant-golem": [96500, 0],
+        "ember": [96500, 0],
+        "no-mutation": [96500, 0]
       },
       titanic_90: {
-        nightmare: [116500, 1]
+        "ever-venom": [116500, 0],
+        "nightmare": [116500, 0],
+        "mega": [116500, 0],
+        "rainbow": [116500, 0],
+        "giant-golem": [116500, 0],
+        "ember": [116500, 0],
+        "no-mutation": [116500, 0]
       },
       titanic_100: {
-        rainbow: [141500, 0]
+        "ever-venom": [141500, 0],
+        "nightmare": [141500, 0],
+        "mega": [141500, 0],
+        "rainbow": [141500, 0],
+        "giant-golem": [141500, 0],
+        "ember": [141500, 0],
+        "no-mutation": [141500, 0]
       },
       titanic_110: {
-        ember: [171500, 0]
+        "ever-venom": [171500, 0],
+        "nightmare": [171500, 0],
+        "mega": [171500, 0],
+        "rainbow": [171500, 0],
+        "giant-golem": [171500, 0],
+        "ember": [171500, 0],
+        "no-mutation": [171500, 0]
       }
     })
   },
@@ -913,15 +2609,76 @@ const PRODUCTS = [
     badge: "Prismatic",
     stock: stock({
       polosan: {
-        "no-mutation": [6000, 10],
-        mega: [8000, 5]
+        "ever-venom": [6000, 0],
+        "nightmare": [6000, 0],
+        "mega": [6000, 0],
+        "rainbow": [6000, 0],
+        "giant-golem": [6000, 0],
+        "ember": [6000, 0],
+        "no-mutation": [6000, 0]
       },
       semi_huge: {
-        mega: [12000, 3]
+        "ever-venom": [12000, 0],
+        "nightmare": [12000, 0],
+        "mega": [12000, 0],
+        "rainbow": [12000, 0],
+        "giant-golem": [12000, 0],
+        "ember": [12000, 0],
+        "no-mutation": [12000, 0]
       },
       huge: {
-        mega: [20000, 2],
-        "ever-venom": [15000, 5]
+        "ever-venom": [15000, 0],
+        "nightmare": [15000, 0],
+        "mega": [15000, 0],
+        "rainbow": [15000, 0],
+        "giant-golem": [15000, 0],
+        "ember": [15000, 0],
+        "no-mutation": [15000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   },
@@ -932,19 +2689,76 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        mega: [12000, 6],
-        rainbow: [15000, 3],
-        "ever-venom": [17000, 2]
+        "ever-venom": [12000, 0],
+        "nightmare": [12000, 0],
+        "mega": [12000, 0],
+        "rainbow": [12000, 0],
+        "giant-golem": [12000, 0],
+        "ember": [12000, 0],
+        "no-mutation": [12000, 0]
       },
       semi_huge: {
-        mega: [21000, 4],
-        nightmare: [24000, 2],
-        ember: [26000, 2]
+        "ever-venom": [21000, 0],
+        "nightmare": [21000, 0],
+        "mega": [21000, 0],
+        "rainbow": [21000, 0],
+        "giant-golem": [21000, 0],
+        "ember": [21000, 0],
+        "no-mutation": [21000, 0]
       },
       huge: {
-        mega: [38000, 3],
-        "ever-venom": [42000, 3],
-        "giant-golem": [47000, 1]
+        "ever-venom": [38000, 0],
+        "nightmare": [38000, 0],
+        "mega": [38000, 0],
+        "rainbow": [38000, 0],
+        "giant-golem": [38000, 0],
+        "ember": [38000, 0],
+        "no-mutation": [38000, 0]
+      },
+      titanic_70: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_80: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_90: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_100: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
+      },
+      titanic_110: {
+        "ever-venom": [10000, 0],
+        "nightmare": [10000, 0],
+        "mega": [10000, 0],
+        "rainbow": [10000, 0],
+        "giant-golem": [10000, 0],
+        "ember": [10000, 0],
+        "no-mutation": [10000, 0]
       }
     })
   }
