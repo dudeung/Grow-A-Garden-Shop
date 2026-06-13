@@ -7,6 +7,7 @@ const state = {
   selectedCategory: null,
   selectedMutation: null,
   selectedQty: 1,
+  tokenMoney: 0,
   checkoutUnique: null,
   bannerIndex: 0
 };
@@ -51,13 +52,20 @@ const els = {
   copyOrderBtn: $("#copyOrderBtn"),
   sendWaBtn: $("#sendWaBtn"),
   toast: $("#toast"),
-  waFloatBtn: $("#waFloatBtn")
+  waFloatBtn: $("#waFloatBtn"),
+  tokenCatalog: $("#tokenCatalog"),
+  tokenMoneyInput: $("#tokenMoneyInput"),
+  tokenResult: $("#tokenResult"),
+  tokenDetail: $("#tokenDetail"),
+  tokenQuickAmounts: $("#tokenQuickAmounts"),
+  addTokenBtn: $("#addTokenBtn")
 };
 
 function init() {
   document.title = `${STORE_CONFIG.storeName} - Grow a Garden Pet`;
   els.qrisImage.src = STORE_CONFIG.qrisImage;
   renderBanners();
+  renderTokenCatalog();
   renderFilters();
   renderTopSellers();
   renderProducts();
@@ -71,6 +79,16 @@ function bindEvents() {
     state.search = event.target.value.trim().toLowerCase();
     renderProducts();
   });
+
+  if (els.tokenMoneyInput) {
+    els.tokenMoneyInput.addEventListener("input", (event) => {
+      state.tokenMoney = parseMoneyInput(event.target.value);
+      renderTokenResult();
+    });
+  }
+  if (els.addTokenBtn) {
+    els.addTokenBtn.addEventListener("click", addTokenToCart);
+  }
 
   els.openCartBtn.addEventListener("click", () => openSheet("cart"));
   els.checkoutBtn.addEventListener("click", () => {
@@ -154,6 +172,112 @@ function autoSlideBanner() {
     const next = (state.bannerIndex + 1) % STORE_CONFIG.banners.length;
     scrollBanner(next);
   }, 4800);
+}
+
+
+function renderTokenCatalog() {
+  const config = STORE_CONFIG.tokenCatalog || {};
+  if (!config.enabled && els.tokenCatalog) {
+    els.tokenCatalog.hidden = true;
+    return;
+  }
+  if (!els.tokenQuickAmounts) return;
+
+  els.tokenQuickAmounts.innerHTML = (config.quickAmounts || []).map((amount) => `
+    <button type="button" data-token-amount="${amount}">${formatRupiah(amount)}</button>
+  `).join("");
+
+  $$('[data-token-amount]').forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state.tokenMoney = Number(btn.dataset.tokenAmount || 0);
+      els.tokenMoneyInput.value = state.tokenMoney;
+      renderTokenResult();
+    });
+  });
+
+  renderTokenResult();
+}
+
+function renderTokenResult() {
+  if (!els.tokenResult || !els.tokenDetail || !els.addTokenBtn) return;
+  const config = STORE_CONFIG.tokenCatalog || {};
+  const money = Number(state.tokenMoney || 0);
+  const pricePerToken = Number(config.pricePerToken || 17.5);
+  const tokenAmount = calculateTokenAmount(money);
+  const minMoney = Number(config.minMoney || 0);
+  const maxMoney = Number(config.maxMoney || Infinity);
+
+  els.tokenResult.textContent = `${formatNumber(tokenAmount)} Token`;
+
+  if (!money) {
+    els.tokenDetail.textContent = "Masukkan nominal dulu.";
+    els.addTokenBtn.disabled = true;
+    els.addTokenBtn.textContent = "Tambah ke Keranjang";
+    return;
+  }
+
+  if (money < minMoney) {
+    els.tokenDetail.textContent = `Minimal nominal ${formatRupiah(minMoney)}.`;
+    els.addTokenBtn.disabled = true;
+    els.addTokenBtn.textContent = "Nominal terlalu kecil";
+    return;
+  }
+
+  if (money > maxMoney) {
+    els.tokenDetail.textContent = `Maksimal nominal ${formatRupiah(maxMoney)}.`;
+    els.addTokenBtn.disabled = true;
+    els.addTokenBtn.textContent = "Nominal terlalu besar";
+    return;
+  }
+
+  if (tokenAmount <= 0) {
+    els.tokenDetail.textContent = `Belum cukup untuk 1 token. Rate: Rp${pricePerToken}/token.`;
+    els.addTokenBtn.disabled = true;
+    els.addTokenBtn.textContent = "Token belum cukup";
+    return;
+  }
+
+  els.tokenDetail.textContent = `${formatRupiah(money)} ÷ Rp${pricePerToken} = ${formatNumber(tokenAmount)} token`;
+  els.addTokenBtn.disabled = false;
+  els.addTokenBtn.textContent = `Tambah ${formatNumber(tokenAmount)} Token • ${formatRupiah(money)}`;
+}
+
+function addTokenToCart() {
+  const money = Number(state.tokenMoney || 0);
+  const tokenAmount = calculateTokenAmount(money);
+  const config = STORE_CONFIG.tokenCatalog || {};
+  const minMoney = Number(config.minMoney || 0);
+  const maxMoney = Number(config.maxMoney || Infinity);
+
+  if (!money) return toast("Masukkan nominal uang dulu.");
+  if (money < minMoney) return toast(`Minimal nominal ${formatRupiah(minMoney)}.`);
+  if (money > maxMoney) return toast(`Maksimal nominal ${formatRupiah(maxMoney)}.`);
+  if (tokenAmount <= 0) return toast("Nominal belum cukup untuk 1 token.");
+
+  const cartId = `token__${money}`;
+  const found = state.cart.find((item) => item.cartId === cartId);
+  if (found) {
+    found.qty += 1;
+  } else {
+    state.cart.push({
+      cartId,
+      type: "token",
+      productId: "token-grow-a-garden",
+      productName: "Token Grow A Garden",
+      image: "",
+      category: "token",
+      mutation: "token",
+      tokenAmount,
+      price: money,
+      stock: 999999,
+      qty: 1
+    });
+  }
+
+  saveCart();
+  renderCartBadge();
+  renderTokenResult();
+  toast(`${formatNumber(tokenAmount)} Token masuk keranjang.`);
 }
 
 function renderFilters() {
@@ -404,10 +528,10 @@ function renderCart() {
   } else {
     els.cartItems.innerHTML = state.cart.map((item) => `
       <article class="cart-item">
-        <img src="${item.image}" alt="${escapeHtml(item.productName)}" />
+        ${getCartItemMedia(item)}
         <div>
           <h4>${escapeHtml(item.productName)}</h4>
-          <p>${escapeHtml(getCategoryLabel(findProduct(item.productId), item.category))} • ${escapeHtml(MUTATION_LABELS[item.mutation] || item.mutation)}</p>
+          <p>${escapeHtml(getCartItemDescription(item))}</p>
           <div class="cart-item-bottom">
             <strong>${formatRupiah(item.price * item.qty)}</strong>
             <div class="mini-qty">
@@ -487,11 +611,41 @@ function buildOrderSummary() {
   const unique = state.checkoutUnique ?? randomUnique();
   const total = subtotal + unique;
   const orderLines = state.cart.map((item, index) => {
+    if (item.type === "token") {
+      return `${index + 1}. ${item.productName}\n   - Token: ${formatNumber((item.tokenAmount || 0) * item.qty)} Token\n   - Nominal: ${formatRupiah(item.price)} x ${item.qty}\n   - Harga: ${formatRupiah(item.price * item.qty)}`;
+    }
+
     const product = findProduct(item.productId);
     return `${index + 1}. ${item.productName}\n   - Berat: ${getCategoryLabel(product, item.category)}\n   - Mutasi: ${MUTATION_LABELS[item.mutation] || item.mutation}\n   - Qty: ${item.qty}\n   - Harga: ${formatRupiah(item.price * item.qty)}`;
   }).join("\n");
 
-  return `Halo ${STORE_CONFIG.storeName}, saya mau checkout pet Grow a Garden.\n\nUsername Roblox: ${username}\nMetode join: ${joinMethod}\n${joinMethod.includes("Private") ? `Link PS: ${STORE_CONFIG.privateServerLink}\n` : ""}\nOrder:\n${orderLines}\n\nSubtotal: ${formatRupiah(subtotal)}\nAngka unik: ${formatRupiah(unique)}\nTotal transfer: ${formatRupiah(total)}\n\nSaya akan bayar via QRIS sesuai total transfer.`;
+  return `Halo ${STORE_CONFIG.storeName}, saya mau checkout Grow a Garden.\n\nUsername Roblox: ${username}\nMetode join: ${joinMethod}\n${joinMethod.includes("Private") ? `Link PS: ${STORE_CONFIG.privateServerLink}\n` : ""}\nOrder:\n${orderLines}\n\nSubtotal: ${formatRupiah(subtotal)}\nAngka unik: ${formatRupiah(unique)}\nTotal transfer: ${formatRupiah(total)}\n\nSaya akan bayar via QRIS sesuai total transfer.`;
+}
+
+
+function getCartItemMedia(item) {
+  if (item.type === "token") {
+    return `<img class="cart-token-img" src="assets/token.png" alt="Token Grow A Garden" />`;
+  }
+
+  return `<img src="${item.image}" alt="${escapeHtml(item.productName)}" />`;
+}
+
+function getCartItemDescription(item) {
+  if (item.type === "token") {
+    const totalToken = (Number(item.tokenAmount || 0) * Number(item.qty || 1));
+    return `${formatNumber(totalToken)} Token • ${formatRupiah(item.price)} per item`;
+  }
+  return `${getCategoryLabel(findProduct(item.productId), item.category)} • ${MUTATION_LABELS[item.mutation] || item.mutation}`;
+}
+
+function calculateTokenAmount(money) {
+  const pricePerToken = Number(STORE_CONFIG.tokenCatalog?.pricePerToken || 17.5);
+  return Math.floor(Number(money || 0) / pricePerToken);
+}
+
+function parseMoneyInput(value) {
+  return Math.max(0, Math.floor(Number(String(value).replace(/[^0-9.]/g, "")) || 0));
 }
 
 function getAvailableCategories(product) {
@@ -569,6 +723,10 @@ function randomUnique() {
 
 function formatRupiah(number) {
   return new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(number || 0);
+}
+
+function formatNumber(number) {
+  return new Intl.NumberFormat("id-ID", { maximumFractionDigits: 0 }).format(number || 0);
 }
 
 function saveCart() {

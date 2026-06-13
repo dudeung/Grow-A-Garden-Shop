@@ -20,6 +20,16 @@ const STORE_CONFIG = {
     max: 99
   },
 
+  // Katalog Token Grow A Garden.
+  // 1 token = Rp17.5, hasil token dibulatkan ke bawah supaya tidak ada koma.
+  tokenCatalog: {
+    enabled: true,
+    pricePerToken: 17.5,
+    minMoney: 1000,
+    maxMoney: 10000000,
+    quickAmounts: [5000, 10000, 25000, 50000, 100000]
+  },
+
   // Banner slider. Ukuran banner terbaik: 1200 x 500 px.
   banners: [
 

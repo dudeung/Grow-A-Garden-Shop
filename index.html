@@ -21,7 +21,7 @@
       <span>DS</span>
     </a>
     <label class="search-wrap" aria-label="Cari produk">
-      <input id="searchInput" type="search" placeholder="Cari pet..." autocomplete="off" />
+      <input id="searchInput" type="search" placeholder="Cari pet / token..." autocomplete="off" />
       <span>🔎</span>
     </label>
     <button id="openCartBtn" class="cart-btn" aria-label="Buka keranjang">
@@ -45,6 +45,35 @@
         <span class="mini-note">Top 3</span>
       </div>
       <div id="topSellerGrid" class="top-seller-grid"></div>
+    </section>
+
+    <section id="tokenCatalog" class="section-block token-block" aria-label="Katalog Token Grow A Garden">
+      <div class="token-card">
+        <div class="token-copy">
+          <p class="eyebrow">KATALOG BARU</p>
+         <h2 class="token-title">
+  <img src="assets/token.png" alt="Token" class="token-title-icon">
+  Token Grow A Garden
+    </h2>
+          <p class="subtitle">Masukkan nominal uang, nanti token otomatis dihitung dan bisa langsung masuk keranjang.</p>
+          <div class="token-rate-pill">1 Token = Rp17.5</div>
+        </div>
+
+        <div class="token-form-card">
+          <label class="token-input-label" for="tokenMoneyInput">Masukkan jumlah uang</label>
+          <div class="token-money-box">
+            <span>Rp</span>
+            <input id="tokenMoneyInput" type="number" min="0" inputmode="numeric" placeholder="Contoh: 5000" />
+          </div>
+          <div id="tokenQuickAmounts" class="token-quick-amounts" aria-label="Nominal cepat"></div>
+          <div class="token-result-box">
+            <span>Hasil token</span>
+            <strong id="tokenResult">0 Token</strong>
+            <small id="tokenDetail">Masukkan nominal dulu.</small>
+          </div>
+          <button id="addTokenBtn" class="primary-btn full-btn" type="button">Tambah ke Keranjang</button>
+        </div>
+      </div>
     </section>
 
     <section class="section-block catalog-block">

@@ -469,3 +469,176 @@ h2, h3 { margin: 0; letter-spacing: -.04em; }
   .product-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .product-card { min-height: 250px; }
 }
+
+
+/* =====================
+   TOKEN GROW A GARDEN
+   ===================== */
+.token-block { scroll-margin-top: 90px; }
+.token-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 18px;
+  align-items: stretch;
+  padding: clamp(18px, 4vw, 26px);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255,209,90,.25), transparent 18rem),
+    radial-gradient(circle at 82% 70%, rgba(125,222,138,.22), transparent 18rem),
+    linear-gradient(135deg, rgba(16,30,22,.94), rgba(7,18,13,.92));
+  box-shadow: var(--shadow);
+}
+
+.token-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-token-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 13px 10px rgba(0,0,0,.4));
+}
+
+.token-title-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 8px rgba(0,0,0,.35));
+}
+
+.token-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255,255,255,.15), transparent 34%, rgba(255,209,90,.13));
+  opacity: .75;
+}
+.token-copy, .token-form-card { position: relative; z-index: 1; }
+.token-copy {
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.token-copy h2 {
+  margin: 4px 0 8px;
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+.token-rate-pill {
+  width: fit-content;
+  margin-top: 18px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255,209,90,.35);
+  border-radius: 999px;
+  color: var(--gold);
+  background: rgba(255,209,90,.12);
+  font-weight: 900;
+  box-shadow: 0 12px 28px rgba(0,0,0,.25);
+}
+.token-form-card {
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 26px;
+  background: rgba(0,0,0,.24);
+  backdrop-filter: blur(12px);
+}
+.token-input-label {
+  display: block;
+  margin: 0 0 9px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+.token-money-box {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.07);
+}
+.token-money-box:focus-within {
+  border-color: rgba(255,209,90,.42);
+  box-shadow: 0 0 0 3px rgba(255,209,90,.09);
+}
+.token-money-box span {
+  color: var(--gold);
+  font-weight: 900;
+}
+.token-money-box input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 900;
+}
+.token-money-box input::placeholder { color: #7f9185; }
+.token-quick-amounts {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+.token-quick-amounts button {
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  padding: 8px 11px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.token-quick-amounts button:hover {
+  border-color: rgba(125,222,138,.34);
+  background: rgba(125,222,138,.12);
+}
+.token-result-box {
+  display: grid;
+  gap: 4px;
+  margin: 14px 0;
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid rgba(125,222,138,.20);
+  background: rgba(125,222,138,.08);
+}
+.token-result-box span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+.token-result-box strong {
+  color: var(--green);
+  font-size: clamp(26px, 4vw, 38px);
+  letter-spacing: -.04em;
+}
+.token-result-box small { color: var(--muted); line-height: 1.35; }
+.cart-token-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  border: 1px solid rgba(255,209,90,.30);
+  background: radial-gradient(circle, rgba(255,209,90,.28), rgba(255,255,255,.06));
+  font-size: 32px;
+  filter: drop-shadow(0 13px 10px rgba(0,0,0,.4));
+}
+
+@media (max-width: 760px) {
+  .token-card { grid-template-columns: 1fr; }
+  .token-copy { min-height: 0; }
+}
