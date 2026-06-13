@@ -249,53 +249,7 @@ h2, h3 { margin: 0; letter-spacing: -.04em; }
 .top-card h4 { margin: 0 0 6px; font-size: 15px; line-height: 1.15; color: var(--text); }
 .top-card p { margin: 0; color: var(--muted); font-size: 12px; }
 
-/* Token Section */
-.token-block {
-  background:
-    linear-gradient(135deg, rgba(255,209,90,.12), rgba(125,222,138,.08)),
-    var(--card);
-  border: 1px solid rgba(255,209,90,.2);
-  border-radius: var(--radius);
-  padding: 28px;
-  margin-top: 42px;
-}
-
-.token-input-row {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 14px;
-  align-items: flex-end;
-  margin-top: 20px;
-}
-
-.token-input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.token-input-group input {
-  padding: 10px 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(16, 30, 22, 0.6);
-  color: var(--text);
-  font-size: 14px;
-}
-
-.token-result {
-  margin: 0;
-  color: var(--green);
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.token-divider {
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 600;
-  text-align: center;
-}
+  
 
 .quick-filters { display: flex; gap: 9px; overflow-x: auto; padding: 2px 0 14px; scrollbar-width: none; }
 .quick-filters::-webkit-scrollbar { display: none; }
