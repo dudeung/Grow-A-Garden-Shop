@@ -51,8 +51,7 @@ const els = {
   copyOrderBtn: $("#copyOrderBtn"),
   sendWaBtn: $("#sendWaBtn"),
   toast: $("#toast"),
-  waFloatBtn: $("#waFloatBtn"),
-
+  waFloatBtn: $("#waFloatBtn")
 };
 
 function init() {
@@ -97,8 +96,6 @@ function bindEvents() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeSheets();
   });
-
- 
 }
 
 function renderBanners() {
@@ -405,30 +402,24 @@ function renderCart() {
   if (!state.cart.length) {
     els.cartItems.innerHTML = `<div class="cart-empty">Keranjang masih kosong.</div>`;
   } else {
-    els.cartItems.innerHTML = state.cart.map((item) => {
-      // Render berbeda untuk token
-  
-      
-      // Render normal untuk pet
-      return `
-        <article class="cart-item">
-          <img src="${item.image}" alt="${escapeHtml(item.productName)}" />
-          <div>
-            <h4>${escapeHtml(item.productName)}</h4>
-            <p>${escapeHtml(getCategoryLabel(findProduct(item.productId), item.category))} • ${escapeHtml(MUTATION_LABELS[item.mutation] || item.mutation)}</p>
-            <div class="cart-item-bottom">
-              <strong>${formatRupiah(item.price * item.qty)}</strong>
-              <div class="mini-qty">
-                <button data-cart-minus="${item.cartId}" aria-label="Kurangi">−</button>
-                <span>${item.qty}</span>
-                <button data-cart-plus="${item.cartId}" aria-label="Tambah" ${item.qty >= item.stock ? "disabled" : ""}>+</button>
-              </div>
-              <button class="remove-btn" data-cart-remove="${item.cartId}">Hapus</button>
+    els.cartItems.innerHTML = state.cart.map((item) => `
+      <article class="cart-item">
+        <img src="${item.image}" alt="${escapeHtml(item.productName)}" />
+        <div>
+          <h4>${escapeHtml(item.productName)}</h4>
+          <p>${escapeHtml(getCategoryLabel(findProduct(item.productId), item.category))} • ${escapeHtml(MUTATION_LABELS[item.mutation] || item.mutation)}</p>
+          <div class="cart-item-bottom">
+            <strong>${formatRupiah(item.price * item.qty)}</strong>
+            <div class="mini-qty">
+              <button data-cart-minus="${item.cartId}" aria-label="Kurangi">−</button>
+              <span>${item.qty}</span>
+              <button data-cart-plus="${item.cartId}" aria-label="Tambah" ${item.qty >= item.stock ? "disabled" : ""}>+</button>
             </div>
+            <button class="remove-btn" data-cart-remove="${item.cartId}">Hapus</button>
           </div>
-        </article>
-      `;
-    }).join("");
+        </div>
+      </article>
+    `).join("");
   }
 
   els.cartSubtotal.textContent = formatRupiah(getSubtotal());
@@ -576,12 +567,8 @@ function randomUnique() {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function formatRupiah(number, showPrefix = true) {
-  const formatted = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(number || 0);
-  if (!showPrefix) {
-    return formatted.replace("Rp", "").trim();
-  }
-  return formatted;
+function formatRupiah(number) {
+  return new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(number || 0);
 }
 
 function saveCart() {
