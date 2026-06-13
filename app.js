@@ -52,12 +52,7 @@ const els = {
   sendWaBtn: $("#sendWaBtn"),
   toast: $("#toast"),
   waFloatBtn: $("#waFloatBtn"),
-  // Token elements
-  tokenAmountInput: $("#tokenAmountInput"),
-  tokenQuantityInput: $("#tokenQuantityInput"),
-  tokenResultFromAmount: $("#tokenResultFromAmount"),
-  tokenResultFromQty: $("#tokenResultFromQty"),
-  addTokenBtn: $("#addTokenBtn")
+
 };
 
 function init() {
@@ -103,10 +98,7 @@ function bindEvents() {
     if (event.key === "Escape") closeSheets();
   });
 
-  // Token input listeners
-  els.tokenAmountInput.addEventListener("input", updateTokenCalculations);
-  els.tokenQuantityInput.addEventListener("input", updateTokenCalculations);
-  els.addTokenBtn.addEventListener("click", addTokenToCart);
+ 
 }
 
 function renderBanners() {
@@ -415,26 +407,7 @@ function renderCart() {
   } else {
     els.cartItems.innerHTML = state.cart.map((item) => {
       // Render berbeda untuk token
-      if (item.isToken) {
-        return `
-          <article class="cart-item">
-            <img src="${item.image}" alt="${escapeHtml(item.productName)}" />
-            <div>
-              <h4>${escapeHtml(item.productName)}</h4>
-              <p>${item.qty} Token @ ${formatRupiah(item.price)}/token</p>
-              <div class="cart-item-bottom">
-                <strong>${formatRupiah(item.price * item.qty)}</strong>
-                <div class="mini-qty">
-                  <button data-cart-minus="${item.cartId}" aria-label="Kurangi">−</button>
-                  <span>${item.qty}</span>
-                  <button data-cart-plus="${item.cartId}" aria-label="Tambah">+</button>
-                </div>
-                <button class="remove-btn" data-cart-remove="${item.cartId}">Hapus</button>
-              </div>
-            </div>
-          </article>
-        `;
-      }
+  
       
       // Render normal untuk pet
       return `
@@ -639,79 +612,6 @@ function toast(message) {
   els.toast.textContent = message;
   els.toast.classList.add("show");
   toastTimer = setTimeout(() => els.toast.classList.remove("show"), 2300);
-}
-
-/* ========== TOKEN FUNCTIONS ========== */
-
-function updateTokenCalculations() {
-  const amount = parseInt(els.tokenAmountInput.value) || 0;
-  const qty = parseInt(els.tokenQuantityInput.value) || 0;
-
-  // Jika ada input uang, hitung tokennya
-  if (amount > 0) {
-    const tokenQty = Math.ceil(amount / STORE_CONFIG.tokenPrice);
-    els.tokenResultFromAmount.textContent = `= ${tokenQty.toLocaleString("id-ID")} Token`;
-  } else {
-    els.tokenResultFromAmount.textContent = `= 0 Token`;
-  }
-
-  // Jika ada input token, hitung harganya
-  if (qty > 0) {
-    const totalPrice = qty * STORE_CONFIG.tokenPrice;
-    els.tokenResultFromQty.textContent = `= Rp${totalPrice.toLocaleString("id-ID")}`;
-  } else {
-    els.tokenResultFromQty.textContent = `= Rp0`;
-  }
-}
-
-function addTokenToCart() {
-  const amount = parseInt(els.tokenAmountInput.value) || 0;
-  const qty = parseInt(els.tokenQuantityInput.value) || 0;
-
-  // Ambil dari mana yg ada nilai
-  let tokenQty = 0;
-  if (amount > 0) {
-    tokenQty = Math.ceil(amount / STORE_CONFIG.tokenPrice);
-  } else if (qty > 0) {
-    tokenQty = qty;
-  } else {
-    return toast("Masukkan jumlah uang atau jumlah token.");
-  }
-
-  const tokenProduct = state.products.find((p) => p.id === "gag-token");
-  if (!tokenProduct) return toast("Token produk tidak ditemukan.");
-
-  const price = STORE_CONFIG.tokenPrice;
-  const cartId = `gag-token-${Date.now()}`;
-
-  // Cek apakah sudah ada token di cart
-  const found = state.cart.find((item) => item.productId === "gag-token");
-
-  if (found) {
-    found.qty += tokenQty;
-  } else {
-    state.cart.push({
-      cartId,
-      productId: "gag-token",
-      productName: tokenProduct.name,
-      image: tokenProduct.image,
-      category: null,
-      mutation: null,
-      price,
-      stock: -1,
-      qty: tokenQty,
-      isToken: true
-    });
-  }
-
-  saveCart();
-  renderCartBadge();
-  toast(`${tokenQty.toLocaleString("id-ID")} Token ditambah ke keranjang.`);
-
-  // Clear inputs
-  els.tokenAmountInput.value = "";
-  els.tokenQuantityInput.value = "";
-  updateTokenCalculations();
 }
 
 init();
