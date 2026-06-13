@@ -69,7 +69,7 @@ const PRODUCTS = [
     "no-mutation": [8000, 0]
       },
       semi_huge: {
-
+"ever-venom": [15000, 1]
       },
       huge: {
 "ever-venom": [18000, 1]
@@ -436,7 +436,7 @@ rainbow: [10000, 1]
       },
       semi_huge: {
  
-    "ever-venom": [5000, 9],
+    "ever-venom": [5000, 0],
     
       },
       huge: {
@@ -505,19 +505,20 @@ rainbow: [10000, 1]
       },
              titanic_70: {
       
-        "ever-venom": [16000, 3]
+        "ever-venom": [16000, 0]
       },
       titanic_80: {
-        "ever-venom": [20000, 4]
+        "ever-venom": [20000, 2]
+         rainbow: [25000, 1]
       },
       titanic_90: {
-        nightmare: [25000, 2]
+        mega: [28000, 1]
       },
       titanic_100: {
-        "ever-venom": [35000, 8]
+        "ever-venom": [35000, 0]
       },
       titanic_110: {
-        nightmare: [45000, 3]
+        nightmare: [45000, 0]
       }
     })
   },
@@ -535,7 +536,7 @@ rainbow: [10000, 1]
       },
       huge: {
     
-        "ever-venom": [4000, 89],
+        "ever-venom": [5000, 89],
       
       }
     
@@ -565,10 +566,10 @@ rainbow: [10000, 1]
     badge: "Divine",
     stock: stock({
       polosan: {
- "no-mutation": [18000, 7]
+ "no-mutation": [18000, 0]
       },
       semi_huge: {
-     
+     "no-mutation": [20000, 1]
       },
       huge: {
         mega: [26000, 29],
