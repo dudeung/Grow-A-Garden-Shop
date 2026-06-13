@@ -249,8 +249,6 @@ h2, h3 { margin: 0; letter-spacing: -.04em; }
 .top-card h4 { margin: 0 0 6px; font-size: 15px; line-height: 1.15; color: var(--text); }
 .top-card p { margin: 0; color: var(--muted); font-size: 12px; }
 
-  
-
 .quick-filters { display: flex; gap: 9px; overflow-x: auto; padding: 2px 0 14px; scrollbar-width: none; }
 .quick-filters::-webkit-scrollbar { display: none; }
 .filter-chip {
