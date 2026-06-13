@@ -135,10 +135,10 @@ const PRODUCTS = [
         "rainbow": [11500, 0],
         "giant-golem": [11500, 0],
         "ember": [11500, 0],
-        "no-mutation": [8000, 1]
+        "no-mutation": [8000, 0]
       },
       semi_huge: {
-        "ever-venom": [13000, 1],
+        "ever-venom": [15000, 1],
         "nightmare": [20500, 0],
         "mega": [20500, 0],
         "rainbow": [20500, 0],
