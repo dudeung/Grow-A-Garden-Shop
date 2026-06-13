@@ -42,7 +42,6 @@ function stock(data) {
 }
 
 const PRODUCTS = [
- 
   {
     id: "bald-eagle",
     name: "Bald Eagle",
@@ -56,7 +55,7 @@ const PRODUCTS = [
         "rainbow": [10000, 0],
         "giant-golem": [10000, 0],
         "ember": [10000, 0],
-        "no-mutation": [10000, 0]
+        "no-mutation": [10000, 3]
       },
       semi_huge: {
         "ever-venom": [19000, 0],
