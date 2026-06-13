@@ -34,6 +34,6 @@ const STORE_CONFIG = {
   topSellers: ["mimic-octopus", "peacock", "raccoon"],
 
   // Token config - harga per token bisa diubah setiap hari
-  tokenPrice: 17500, // Rp per token
+  tokenPrice: 17.5, // Rp per token
   tokenImage: "assets/tokens/token.svg" // Path gambar token
 };
