@@ -43,6 +43,14 @@ function stock(data) {
 
 const PRODUCTS = [
   {
+    id: "gag-token",
+    name: "Grow A Garden Token",
+    image: STORE_CONFIG.tokenImage,
+    badge: "Token",
+    isToken: true,
+    stock: { default: [STORE_CONFIG.tokenPrice, -1] } // -1 = unlimited
+  },
+  {
     id: "bald-eagle",
     name: "Bald Eagle",
     image: "assets/pets/bald-eagle.png",

@@ -31,5 +31,9 @@ const STORE_CONFIG = {
   ],
 
   // Top 3 terlaris. Isi pakai id pet dari products.js
-  topSellers: ["mimic-octopus", "peacock", "raccoon"]
+  topSellers: ["mimic-octopus", "peacock", "raccoon"],
+
+  // Token config - harga per token bisa diubah setiap hari
+  tokenPrice: 17500, // Rp per token
+  tokenImage: "assets/tokens/token.svg" // Path gambar token
 };

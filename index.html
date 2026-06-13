@@ -47,6 +47,58 @@
       <div id="topSellerGrid" class="top-seller-grid"></div>
     </section>
 
+    <section class="section-block token-block">
+      <div class="section-heading-center">
+        <p class="eyebrow">JUAL BELI TOKEN</p>
+        <h2>💎 Grow A Garden Token</h2>
+        <p class="subtitle">1 Token = Rp<span id="tokenPriceDisplay">17.500</span> (Update harian)</p>
+      </div>
+
+      <div class="token-input-area">
+        <!-- Tab: Input Uang vs Input Jumlah -->
+        <div class="token-tabs">
+          <button class="token-tab-btn active" data-tab="by-amount">💰 Input Jumlah Uang</button>
+          <button class="token-tab-btn" data-tab="by-quantity">🪙 Input Jumlah Token</button>
+        </div>
+
+        <!-- Tab: By Amount (Input Uang) -->
+        <div class="token-tab-content active" data-tab="by-amount">
+          <label class="field-label">
+            Berapa Rp yang mau dihabiskan?
+            <input id="tokenAmountInput" type="number" placeholder="Contoh: 100000" min="0" />
+          </label>
+          <div class="token-calc-result">
+            <div class="result-item">
+              <span class="result-label">Jumlah Token:</span>
+              <strong id="tokenCalcFromAmount">0</strong>
+            </div>
+            <div class="result-item">
+              <span class="result-label">Total Harga:</span>
+              <strong id="tokenTotalFromAmount">Rp0</strong>
+            </div>
+          </div>
+          <button id="addTokenByAmountBtn" class="primary-btn full-btn">Tambah ke Keranjang</button>
+        </div>
+
+        <!-- Tab: By Quantity (Input Jumlah) -->
+        <div class="token-tab-content" data-tab="by-quantity">
+          <label class="field-label">
+            Berapa token yang mau dibeli?
+            <input id="tokenQuantityInput" type="number" placeholder="Contoh: 5" min="1" />
+          </label>
+          <div class="token-calc-result">
+            <div class="result-item">
+              <span class="result-label">Total Harga:</span>
+              <strong id="tokenTotalFromQty">Rp0</strong>
+            </div>
+          </div>
+          <button id="addTokenByQtyBtn" class="primary-btn full-btn">Tambah ke Keranjang</button>
+        </div>
+
+        <p class="token-note">💡 <strong>Logika Pembulatan:</strong> Jika uang kelebihan, akan dibulatkan +1 token agar Anda tidak rugi.</p>
+      </div>
+    </section>
+
     <section class="section-block catalog-block">
       <div class="section-heading-center">
         <p class="eyebrow">KATALOG PRODUK</p>

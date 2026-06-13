@@ -51,12 +51,24 @@ const els = {
   copyOrderBtn: $("#copyOrderBtn"),
   sendWaBtn: $("#sendWaBtn"),
   toast: $("#toast"),
-  waFloatBtn: $("#waFloatBtn")
+  waFloatBtn: $("#waFloatBtn"),
+  // Token elements
+  tokenPriceDisplay: $("#tokenPriceDisplay"),
+  tokenTabBtns: $$(".token-tab-btn"),
+  tokenTabContents: $$(".token-tab-content"),
+  tokenAmountInput: $("#tokenAmountInput"),
+  tokenQuantityInput: $("#tokenQuantityInput"),
+  tokenCalcFromAmount: $("#tokenCalcFromAmount"),
+  tokenTotalFromAmount: $("#tokenTotalFromAmount"),
+  tokenTotalFromQty: $("#tokenTotalFromQty"),
+  addTokenByAmountBtn: $("#addTokenByAmountBtn"),
+  addTokenByQtyBtn: $("#addTokenByQtyBtn")
 };
 
 function init() {
   document.title = `${STORE_CONFIG.storeName} - Grow a Garden Pet`;
   els.qrisImage.src = STORE_CONFIG.qrisImage;
+  els.tokenPriceDisplay.textContent = formatRupiah(STORE_CONFIG.tokenPrice, false);
   renderBanners();
   renderFilters();
   renderTopSellers();
@@ -96,6 +108,27 @@ function bindEvents() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeSheets();
   });
+
+  // Token Tab Switching
+  els.tokenTabBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tabName = btn.dataset.tab;
+      els.tokenTabBtns.forEach((b) => b.classList.toggle("active", b === btn));
+      els.tokenTabContents.forEach((content) => {
+        content.classList.toggle("active", content.dataset.tab === tabName);
+      });
+    });
+  });
+
+  // Token Input: By Amount
+  els.tokenAmountInput.addEventListener("input", calculateTokenFromAmount);
+
+  // Token Input: By Quantity
+  els.tokenQuantityInput.addEventListener("input", calculateTokenFromQty);
+
+  // Token Add to Cart Buttons
+  els.addTokenByAmountBtn.addEventListener("click", addTokenByAmount);
+  els.addTokenByQtyBtn.addEventListener("click", addTokenByQty);
 }
 
 function renderBanners() {
@@ -402,24 +435,49 @@ function renderCart() {
   if (!state.cart.length) {
     els.cartItems.innerHTML = `<div class="cart-empty">Keranjang masih kosong.</div>`;
   } else {
-    els.cartItems.innerHTML = state.cart.map((item) => `
-      <article class="cart-item">
-        <img src="${item.image}" alt="${escapeHtml(item.productName)}" />
-        <div>
-          <h4>${escapeHtml(item.productName)}</h4>
-          <p>${escapeHtml(getCategoryLabel(findProduct(item.productId), item.category))} • ${escapeHtml(MUTATION_LABELS[item.mutation] || item.mutation)}</p>
-          <div class="cart-item-bottom">
-            <strong>${formatRupiah(item.price * item.qty)}</strong>
-            <div class="mini-qty">
-              <button data-cart-minus="${item.cartId}" aria-label="Kurangi">−</button>
-              <span>${item.qty}</span>
-              <button data-cart-plus="${item.cartId}" aria-label="Tambah" ${item.qty >= item.stock ? "disabled" : ""}>+</button>
+    els.cartItems.innerHTML = state.cart.map((item) => {
+      // Render berbeda untuk token
+      if (item.isToken) {
+        return `
+          <article class="cart-item">
+            <img src="${item.image}" alt="${escapeHtml(item.productName)}" />
+            <div>
+              <h4>${escapeHtml(item.productName)}</h4>
+              <p>${item.qty} Token @ ${formatRupiah(item.price)}/token</p>
+              <div class="cart-item-bottom">
+                <strong>${formatRupiah(item.price * item.qty)}</strong>
+                <div class="mini-qty">
+                  <button data-cart-minus="${item.cartId}" aria-label="Kurangi">−</button>
+                  <span>${item.qty}</span>
+                  <button data-cart-plus="${item.cartId}" aria-label="Tambah">+</button>
+                </div>
+                <button class="remove-btn" data-cart-remove="${item.cartId}">Hapus</button>
+              </div>
             </div>
-            <button class="remove-btn" data-cart-remove="${item.cartId}">Hapus</button>
+          </article>
+        `;
+      }
+      
+      // Render normal untuk pet
+      return `
+        <article class="cart-item">
+          <img src="${item.image}" alt="${escapeHtml(item.productName)}" />
+          <div>
+            <h4>${escapeHtml(item.productName)}</h4>
+            <p>${escapeHtml(getCategoryLabel(findProduct(item.productId), item.category))} • ${escapeHtml(MUTATION_LABELS[item.mutation] || item.mutation)}</p>
+            <div class="cart-item-bottom">
+              <strong>${formatRupiah(item.price * item.qty)}</strong>
+              <div class="mini-qty">
+                <button data-cart-minus="${item.cartId}" aria-label="Kurangi">−</button>
+                <span>${item.qty}</span>
+                <button data-cart-plus="${item.cartId}" aria-label="Tambah" ${item.qty >= item.stock ? "disabled" : ""}>+</button>
+              </div>
+              <button class="remove-btn" data-cart-remove="${item.cartId}">Hapus</button>
+            </div>
           </div>
-        </div>
-      </article>
-    `).join("");
+        </article>
+      `;
+    }).join("");
   }
 
   els.cartSubtotal.textContent = formatRupiah(getSubtotal());
@@ -567,8 +625,12 @@ function randomUnique() {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function formatRupiah(number) {
-  return new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(number || 0);
+function formatRupiah(number, showPrefix = true) {
+  const formatted = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(number || 0);
+  if (!showPrefix) {
+    return formatted.replace("Rp", "").trim();
+  }
+  return formatted;
 }
 
 function saveCart() {
@@ -599,6 +661,86 @@ function toast(message) {
   els.toast.textContent = message;
   els.toast.classList.add("show");
   toastTimer = setTimeout(() => els.toast.classList.remove("show"), 2300);
+}
+
+/* ========== TOKEN FUNCTIONS ========== */
+
+function calculateTokenFromAmount() {
+  const amount = parseInt(els.tokenAmountInput.value) || 0;
+  if (amount <= 0) {
+    els.tokenCalcFromAmount.textContent = "0";
+    els.tokenTotalFromAmount.textContent = "Rp0";
+    return;
+  }
+
+  // Calculate: amount / tokenPrice, then ceil (pembulatan ke atas)
+  const tokenQty = Math.ceil(amount / STORE_CONFIG.tokenPrice);
+  const totalPrice = tokenQty * STORE_CONFIG.tokenPrice;
+
+  els.tokenCalcFromAmount.textContent = tokenQty.toLocaleString("id-ID");
+  els.tokenTotalFromAmount.textContent = formatRupiah(totalPrice);
+}
+
+function calculateTokenFromQty() {
+  const qty = parseInt(els.tokenQuantityInput.value) || 0;
+  if (qty <= 0) {
+    els.tokenTotalFromQty.textContent = "Rp0";
+    return;
+  }
+
+  const totalPrice = qty * STORE_CONFIG.tokenPrice;
+  els.tokenTotalFromQty.textContent = formatRupiah(totalPrice);
+}
+
+function addTokenByAmount() {
+  const amount = parseInt(els.tokenAmountInput.value) || 0;
+  if (amount <= 0) return toast("Masukkan jumlah uang terlebih dahulu.");
+
+  const tokenQty = Math.ceil(amount / STORE_CONFIG.tokenPrice);
+  addTokenToCart(tokenQty);
+  els.tokenAmountInput.value = "";
+  calculateTokenFromAmount();
+}
+
+function addTokenByQty() {
+  const qty = parseInt(els.tokenQuantityInput.value) || 0;
+  if (qty <= 0) return toast("Masukkan jumlah token terlebih dahulu.");
+
+  addTokenToCart(qty);
+  els.tokenQuantityInput.value = "";
+  calculateTokenFromQty();
+}
+
+function addTokenToCart(tokenQty) {
+  const tokenProduct = state.products.find((p) => p.id === "gag-token");
+  if (!tokenProduct) return toast("Token produk tidak ditemukan.");
+
+  const price = STORE_CONFIG.tokenPrice;
+  const cartId = `gag-token-qty-${tokenQty}-${Date.now()}`; // Unique cartId
+  const found = state.cart.find((item) => item.productId === "gag-token");
+
+  if (found) {
+    // Jika sudah ada token di cart, tambah ke existing
+    found.qty += tokenQty;
+  } else {
+    // Tambah token baru ke cart
+    state.cart.push({
+      cartId,
+      productId: "gag-token",
+      productName: tokenProduct.name,
+      image: tokenProduct.image,
+      category: null,
+      mutation: null,
+      price,
+      stock: -1, // unlimited
+      qty: tokenQty,
+      isToken: true
+    });
+  }
+
+  saveCart();
+  renderCartBadge();
+  toast(`${tokenQty} Token masuk keranjang.`);
 }
 
 init();

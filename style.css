@@ -249,6 +249,91 @@ h2, h3 { margin: 0; letter-spacing: -.04em; }
 .top-card h4 { margin: 0 0 6px; font-size: 15px; line-height: 1.15; color: var(--text); }
 .top-card p { margin: 0; color: var(--muted); font-size: 12px; }
 
+/* Token Section */
+.token-block {
+  background:
+    linear-gradient(135deg, rgba(255,209,90,.12), rgba(125,222,138,.08)),
+    radial-gradient(circle at 30% 50%, rgba(255,209,90,.08), transparent 20rem),
+    var(--card);
+  border: 1px solid rgba(255,209,90,.2);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-top: 42px;
+}
+
+.token-input-area {
+  background: rgba(16, 30, 22, 0.5);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 18px;
+}
+
+.token-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+}
+
+.token-tab-btn {
+  padding: 8px 14px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+.token-tab-btn:hover { color: var(--text); }
+
+.token-tab-btn.active {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+.token-tab-content {
+  display: none;
+}
+
+.token-tab-content.active {
+  display: block;
+}
+
+.token-calc-result {
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.result-label { color: var(--muted); }
+
+.token-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 16px;
+  padding: 10px 12px;
+  background: rgba(125,222,138,.08);
+  border-left: 3px solid var(--green);
+  border-radius: 6px;
+}
+
 .quick-filters { display: flex; gap: 9px; overflow-x: auto; padding: 2px 0 14px; scrollbar-width: none; }
 .quick-filters::-webkit-scrollbar { display: none; }
 .filter-chip {
