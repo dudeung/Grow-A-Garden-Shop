@@ -55,7 +55,7 @@ const PRODUCTS = [
         "rainbow": [10000, 0],
         "giant-golem": [10000, 0],
         "ember": [10000, 0],
-        "no-mutation": [10000, 0]
+        "no-mutation": [1000, 5]
       },
       semi_huge: {
         "ever-venom": [19000, 0],
@@ -129,16 +129,16 @@ const PRODUCTS = [
     badge: "Divine",
     stock: stock({
       polosan: {
-        "ever-venom": [11500, 0],
+        "ever-venom": [8000, 0],
         "nightmare": [11500, 0],
         "mega": [11500, 0],
         "rainbow": [11500, 0],
         "giant-golem": [11500, 0],
         "ember": [11500, 0],
-        "no-mutation": [11500, 0]
+        "no-mutation": [8000, 1]
       },
       semi_huge: {
-        "ever-venom": [20500, 0],
+        "ever-venom": [13000, 1],
         "nightmare": [20500, 0],
         "mega": [20500, 0],
         "rainbow": [20500, 0],
@@ -147,7 +147,7 @@ const PRODUCTS = [
         "no-mutation": [20500, 0]
       },
       huge: {
-        "ever-venom": [37500, 0],
+        "ever-venom": [18000, 1],
         "nightmare": [37500, 0],
         "mega": [37500, 0],
         "rainbow": [37500, 0],
@@ -215,7 +215,7 @@ const PRODUCTS = [
         "rainbow": [13000, 0],
         "giant-golem": [13000, 0],
         "ember": [13000, 0],
-        "no-mutation": [15000, 2]
+        "no-mutation": [17000, 2]
       },
       semi_huge: {
         "ever-venom": [22000, 0],
@@ -307,7 +307,7 @@ const PRODUCTS = [
         "no-mutation": [23500, 0]
       },
       huge: {
-        "ever-venom": [40500, 0],
+        "ever-venom": [5000, 9],
         "nightmare": [40500, 0],
         "mega": [40500, 0],
         "rainbow": [40500, 0],
@@ -390,7 +390,7 @@ const PRODUCTS = [
         "ever-venom": [42000, 0],
         "nightmare": [42000, 0],
         "mega": [42000, 0],
-        "rainbow": [42000, 0],
+        "rainbow": [10000, 1],
         "giant-golem": [42000, 0],
         "ember": [42000, 0],
         "no-mutation": [42000, 0]
@@ -455,7 +455,7 @@ const PRODUCTS = [
         "rainbow": [17500, 0],
         "giant-golem": [17500, 0],
         "ember": [17500, 0],
-        "no-mutation": [17500, 0]
+        "no-mutation": [1000, 4]
       },
       semi_huge: {
         "ever-venom": [26500, 0],
@@ -467,7 +467,7 @@ const PRODUCTS = [
         "no-mutation": [26500, 0]
       },
       huge: {
-        "ever-venom": [43500, 0],
+        "ever-venom": [8000, 2],
         "nightmare": [43500, 0],
         "mega": [43500, 0],
         "rainbow": [43500, 0],
@@ -550,7 +550,7 @@ const PRODUCTS = [
         "ever-venom": [50000, 0],
         "nightmare": [50000, 0],
         "mega": [50000, 0],
-        "rainbow": [50000, 0],
+        "rainbow": [15000, 1],
         "giant-golem": [50000, 0],
         "ember": [50000, 0],
         "no-mutation": [50000, 0]
@@ -627,7 +627,7 @@ const PRODUCTS = [
         "no-mutation": [20500, 0]
       },
       huge: {
-        "ever-venom": [37500, 0],
+        "ever-venom": [5000, 18],
         "nightmare": [37500, 0],
         "mega": [37500, 0],
         "rainbow": [37500, 0],
@@ -787,7 +787,7 @@ const PRODUCTS = [
         "no-mutation": [23500, 0]
       },
       huge: {
-        "ever-venom": [40500, 0],
+        "ever-venom": [8000, 8],
         "nightmare": [40500, 0],
         "mega": [40500, 0],
         "rainbow": [40500, 0],
@@ -852,7 +852,7 @@ const PRODUCTS = [
         "ever-venom": [16000, 0],
         "nightmare": [16000, 0],
         "mega": [16000, 0],
-        "rainbow": [16000, 0],
+        "rainbow": [15000, 2],
         "giant-golem": [16000, 0],
         "ember": [16000, 0],
         "no-mutation": [16000, 0]
@@ -1027,7 +1027,7 @@ const PRODUCTS = [
         "no-mutation": [19000, 0]
       },
       huge: {
-        "ever-venom": [36000, 0],
+        "ever-venom": [6000, 7],
         "nightmare": [36000, 0],
         "mega": [36000, 0],
         "rainbow": [36000, 0],
@@ -1095,7 +1095,7 @@ const PRODUCTS = [
         "rainbow": [11500, 0],
         "giant-golem": [11500, 0],
         "ember": [11500, 0],
-        "no-mutation": [11500, 0]
+        "no-mutation": [1000, 5]
       },
       semi_huge: {
         "ever-venom": [20500, 0],
@@ -1187,7 +1187,7 @@ const PRODUCTS = [
         "no-mutation": [22000, 0]
       },
       huge: {
-        "ever-venom": [39000, 0],
+        "ever-venom": [7000, 8],
         "nightmare": [39000, 0],
         "mega": [39000, 0],
         "rainbow": [39000, 0],
@@ -1267,7 +1267,7 @@ const PRODUCTS = [
         "no-mutation": [23500, 0]
       },
       huge: {
-        "ever-venom": [40500, 0],
+        "ever-venom": [6000, 6],
         "nightmare": [40500, 0],
         "mega": [40500, 0],
         "rainbow": [40500, 0],
@@ -1347,7 +1347,7 @@ const PRODUCTS = [
         "no-mutation": [25000, 0]
       },
       huge: {
-        "ever-venom": [42000, 0],
+        "ever-venom": [7000, 9],
         "nightmare": [42000, 0],
         "mega": [42000, 0],
         "rainbow": [42000, 0],
@@ -1427,7 +1427,7 @@ const PRODUCTS = [
         "no-mutation": [26500, 0]
       },
       huge: {
-        "ever-venom": [43500, 0],
+        "ever-venom": [6000, 5],
         "nightmare": [43500, 0],
         "mega": [43500, 0],
         "rainbow": [43500, 0],
@@ -1509,8 +1509,8 @@ const PRODUCTS = [
       huge: {
         "ever-venom": [46000, 0],
         "nightmare": [46000, 0],
-        "mega": [46000, 0],
-        "rainbow": [46000, 0],
+        "mega": [22000, 3],
+        "rainbow": [26000, 3],
         "giant-golem": [46000, 0],
         "ember": [46000, 0],
         "no-mutation": [46000, 0]
@@ -1587,7 +1587,7 @@ const PRODUCTS = [
         "no-mutation": [20500, 0]
       },
       huge: {
-        "ever-venom": [37500, 0],
+        "ever-venom": [6000, 28],
         "nightmare": [37500, 0],
         "mega": [37500, 0],
         "rainbow": [37500, 0],
@@ -1667,7 +1667,7 @@ const PRODUCTS = [
         "no-mutation": [22000, 0]
       },
       huge: {
-        "ever-venom": [39000, 0],
+        "ever-venom": [7000, 10],
         "nightmare": [39000, 0],
         "mega": [39000, 0],
         "rainbow": [39000, 0],
@@ -1815,10 +1815,10 @@ const PRODUCTS = [
         "rainbow": [24000, 0],
         "giant-golem": [24000, 0],
         "ember": [24000, 0],
-        "no-mutation": [24000, 0]
+        "no-mutation": [1800, 121]
       },
       semi_huge: {
-        "ever-venom": [33000, 0],
+        "ever-venom": [2500, 3],
         "nightmare": [33000, 0],
         "mega": [33000, 0],
         "rainbow": [33000, 0],
@@ -1827,7 +1827,7 @@ const PRODUCTS = [
         "no-mutation": [33000, 0]
       },
       huge: {
-        "ever-venom": [50000, 0],
+        "ever-venom": [4000, 11],
         "nightmare": [50000, 0],
         "mega": [50000, 0],
         "rainbow": [50000, 0],
@@ -1987,7 +1987,7 @@ const PRODUCTS = [
         "no-mutation": [19000, 0]
       },
       huge: {
-        "ever-venom": [36000, 0],
+        "ever-venom": [6000, 3],
         "nightmare": [36000, 0],
         "mega": [36000, 0],
         "rainbow": [36000, 0],
@@ -2005,7 +2005,7 @@ const PRODUCTS = [
         "no-mutation": [10000, 0]
       },
       titanic_80: {
-        "ever-venom": [10000, 0],
+        "ever-venom": [20000, 3],
         "nightmare": [10000, 0],
         "mega": [10000, 0],
         "rainbow": [10000, 0],
@@ -2014,7 +2014,7 @@ const PRODUCTS = [
         "no-mutation": [10000, 0]
       },
       titanic_90: {
-        "ever-venom": [10000, 0],
+        "ever-venom": [25000, 2],
         "nightmare": [10000, 0],
         "mega": [10000, 0],
         "rainbow": [10000, 0],
@@ -2023,7 +2023,7 @@ const PRODUCTS = [
         "no-mutation": [10000, 0]
       },
       titanic_100: {
-        "ever-venom": [10000, 0],
+        "ever-venom": [35000, 6],
         "nightmare": [10000, 0],
         "mega": [10000, 0],
         "rainbow": [10000, 0],
@@ -2032,7 +2032,7 @@ const PRODUCTS = [
         "no-mutation": [10000, 0]
       },
       titanic_110: {
-        "ever-venom": [10000, 0],
+        "ever-venom": [45000, 2],
         "nightmare": [10000, 0],
         "mega": [10000, 0],
         "rainbow": [10000, 0],
@@ -2067,7 +2067,7 @@ const PRODUCTS = [
         "no-mutation": [25000, 0]
       },
       huge: {
-        "ever-venom": [42000, 0],
+        "ever-venom": [5000, 81],
         "nightmare": [42000, 0],
         "mega": [42000, 0],
         "rainbow": [42000, 0],
@@ -2229,8 +2229,8 @@ const PRODUCTS = [
       huge: {
         "ever-venom": [48000, 0],
         "nightmare": [48000, 0],
-        "mega": [48000, 0],
-        "rainbow": [48000, 0],
+        "mega": [26000, 25],
+        "rainbow": [30000, 5],
         "giant-golem": [48000, 0],
         "ember": [48000, 0],
         "no-mutation": [48000, 0]
@@ -2307,7 +2307,7 @@ const PRODUCTS = [
         "no-mutation": [25000, 0]
       },
       huge: {
-        "ever-venom": [42000, 0],
+        "ever-venom": [5000, 18],
         "nightmare": [42000, 0],
         "mega": [42000, 0],
         "rainbow": [42000, 0],
@@ -2467,9 +2467,9 @@ const PRODUCTS = [
         "no-mutation": [19000, 0]
       },
       huge: {
-        "ever-venom": [36000, 0],
+        "ever-venom": [10000, 1],
         "nightmare": [36000, 0],
-        "mega": [36000, 0],
+        "mega": [15000, 1],
         "rainbow": [36000, 0],
         "giant-golem": [36000, 0],
         "ember": [36000, 0],
@@ -2547,7 +2547,7 @@ const PRODUCTS = [
         "no-mutation": [20500, 0]
       },
       huge: {
-        "ever-venom": [37500, 0],
+        "ever-venom": [5000, 6],
         "nightmare": [37500, 0],
         "mega": [37500, 0],
         "rainbow": [37500, 0],
@@ -2615,7 +2615,7 @@ const PRODUCTS = [
         "rainbow": [6000, 0],
         "giant-golem": [6000, 0],
         "ember": [6000, 0],
-        "no-mutation": [6000, 0]
+        "no-mutation": [6000, 5]
       },
       semi_huge: {
         "ever-venom": [12000, 0],
@@ -2627,7 +2627,7 @@ const PRODUCTS = [
         "no-mutation": [12000, 0]
       },
       huge: {
-        "ever-venom": [15000, 0],
+        "ever-venom": [15000, 7],
         "nightmare": [15000, 0],
         "mega": [15000, 0],
         "rainbow": [15000, 0],
