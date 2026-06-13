@@ -53,22 +53,16 @@ const els = {
   toast: $("#toast"),
   waFloatBtn: $("#waFloatBtn"),
   // Token elements
-  tokenPriceDisplay: $("#tokenPriceDisplay"),
-  tokenTabBtns: $$(".token-tab-btn"),
-  tokenTabContents: $$(".token-tab-content"),
   tokenAmountInput: $("#tokenAmountInput"),
   tokenQuantityInput: $("#tokenQuantityInput"),
-  tokenCalcFromAmount: $("#tokenCalcFromAmount"),
-  tokenTotalFromAmount: $("#tokenTotalFromAmount"),
-  tokenTotalFromQty: $("#tokenTotalFromQty"),
-  addTokenByAmountBtn: $("#addTokenByAmountBtn"),
-  addTokenByQtyBtn: $("#addTokenByQtyBtn")
+  tokenResultFromAmount: $("#tokenResultFromAmount"),
+  tokenResultFromQty: $("#tokenResultFromQty"),
+  addTokenBtn: $("#addTokenBtn")
 };
 
 function init() {
   document.title = `${STORE_CONFIG.storeName} - Grow a Garden Pet`;
   els.qrisImage.src = STORE_CONFIG.qrisImage;
-  els.tokenPriceDisplay.textContent = formatRupiah(STORE_CONFIG.tokenPrice, false);
   renderBanners();
   renderFilters();
   renderTopSellers();
@@ -109,26 +103,10 @@ function bindEvents() {
     if (event.key === "Escape") closeSheets();
   });
 
-  // Token Tab Switching
-  els.tokenTabBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const tabName = btn.dataset.tab;
-      els.tokenTabBtns.forEach((b) => b.classList.toggle("active", b === btn));
-      els.tokenTabContents.forEach((content) => {
-        content.classList.toggle("active", content.dataset.tab === tabName);
-      });
-    });
-  });
-
-  // Token Input: By Amount
-  els.tokenAmountInput.addEventListener("input", calculateTokenFromAmount);
-
-  // Token Input: By Quantity
-  els.tokenQuantityInput.addEventListener("input", calculateTokenFromQty);
-
-  // Token Add to Cart Buttons
-  els.addTokenByAmountBtn.addEventListener("click", addTokenByAmount);
-  els.addTokenByQtyBtn.addEventListener("click", addTokenByQty);
+  // Token input listeners
+  els.tokenAmountInput.addEventListener("input", updateTokenCalculations);
+  els.tokenQuantityInput.addEventListener("input", updateTokenCalculations);
+  els.addTokenBtn.addEventListener("click", addTokenToCart);
 }
 
 function renderBanners() {
@@ -665,65 +643,53 @@ function toast(message) {
 
 /* ========== TOKEN FUNCTIONS ========== */
 
-function calculateTokenFromAmount() {
+function updateTokenCalculations() {
   const amount = parseInt(els.tokenAmountInput.value) || 0;
-  if (amount <= 0) {
-    els.tokenCalcFromAmount.textContent = "0";
-    els.tokenTotalFromAmount.textContent = "Rp0";
-    return;
+  const qty = parseInt(els.tokenQuantityInput.value) || 0;
+
+  // Jika ada input uang, hitung tokennya
+  if (amount > 0) {
+    const tokenQty = Math.ceil(amount / STORE_CONFIG.tokenPrice);
+    els.tokenResultFromAmount.textContent = `= ${tokenQty.toLocaleString("id-ID")} Token`;
+  } else {
+    els.tokenResultFromAmount.textContent = `= 0 Token`;
   }
 
-  // Calculate: amount / tokenPrice, then ceil (pembulatan ke atas)
-  const tokenQty = Math.ceil(amount / STORE_CONFIG.tokenPrice);
-  const totalPrice = tokenQty * STORE_CONFIG.tokenPrice;
-
-  els.tokenCalcFromAmount.textContent = tokenQty.toLocaleString("id-ID");
-  els.tokenTotalFromAmount.textContent = formatRupiah(totalPrice);
+  // Jika ada input token, hitung harganya
+  if (qty > 0) {
+    const totalPrice = qty * STORE_CONFIG.tokenPrice;
+    els.tokenResultFromQty.textContent = `= Rp${totalPrice.toLocaleString("id-ID")}`;
+  } else {
+    els.tokenResultFromQty.textContent = `= Rp0`;
+  }
 }
 
-function calculateTokenFromQty() {
+function addTokenToCart() {
+  const amount = parseInt(els.tokenAmountInput.value) || 0;
   const qty = parseInt(els.tokenQuantityInput.value) || 0;
-  if (qty <= 0) {
-    els.tokenTotalFromQty.textContent = "Rp0";
-    return;
+
+  // Ambil dari mana yg ada nilai
+  let tokenQty = 0;
+  if (amount > 0) {
+    tokenQty = Math.ceil(amount / STORE_CONFIG.tokenPrice);
+  } else if (qty > 0) {
+    tokenQty = qty;
+  } else {
+    return toast("Masukkan jumlah uang atau jumlah token.");
   }
 
-  const totalPrice = qty * STORE_CONFIG.tokenPrice;
-  els.tokenTotalFromQty.textContent = formatRupiah(totalPrice);
-}
-
-function addTokenByAmount() {
-  const amount = parseInt(els.tokenAmountInput.value) || 0;
-  if (amount <= 0) return toast("Masukkan jumlah uang terlebih dahulu.");
-
-  const tokenQty = Math.ceil(amount / STORE_CONFIG.tokenPrice);
-  addTokenToCart(tokenQty);
-  els.tokenAmountInput.value = "";
-  calculateTokenFromAmount();
-}
-
-function addTokenByQty() {
-  const qty = parseInt(els.tokenQuantityInput.value) || 0;
-  if (qty <= 0) return toast("Masukkan jumlah token terlebih dahulu.");
-
-  addTokenToCart(qty);
-  els.tokenQuantityInput.value = "";
-  calculateTokenFromQty();
-}
-
-function addTokenToCart(tokenQty) {
   const tokenProduct = state.products.find((p) => p.id === "gag-token");
   if (!tokenProduct) return toast("Token produk tidak ditemukan.");
 
   const price = STORE_CONFIG.tokenPrice;
-  const cartId = `gag-token-qty-${tokenQty}-${Date.now()}`; // Unique cartId
+  const cartId = `gag-token-${Date.now()}`;
+
+  // Cek apakah sudah ada token di cart
   const found = state.cart.find((item) => item.productId === "gag-token");
 
   if (found) {
-    // Jika sudah ada token di cart, tambah ke existing
     found.qty += tokenQty;
   } else {
-    // Tambah token baru ke cart
     state.cart.push({
       cartId,
       productId: "gag-token",
@@ -732,7 +698,7 @@ function addTokenToCart(tokenQty) {
       category: null,
       mutation: null,
       price,
-      stock: -1, // unlimited
+      stock: -1,
       qty: tokenQty,
       isToken: true
     });
@@ -740,7 +706,12 @@ function addTokenToCart(tokenQty) {
 
   saveCart();
   renderCartBadge();
-  toast(`${tokenQty} Token masuk keranjang.`);
+  toast(`${tokenQty.toLocaleString("id-ID")} Token ditambah ke keranjang.`);
+
+  // Clear inputs
+  els.tokenAmountInput.value = "";
+  els.tokenQuantityInput.value = "";
+  updateTokenCalculations();
 }
 
 init();
