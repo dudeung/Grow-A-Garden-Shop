@@ -202,7 +202,7 @@ function renderTokenResult() {
   if (!els.tokenResult || !els.tokenDetail || !els.addTokenBtn) return;
   const config = STORE_CONFIG.tokenCatalog || {};
   const money = Number(state.tokenMoney || 0);
-  const pricePerToken = Number(config.pricePerToken || 17.5);
+  const pricePerToken = Number(config.pricePerToken || 16);
   const tokenAmount = calculateTokenAmount(money);
   const minMoney = Number(config.minMoney || 0);
   const maxMoney = Number(config.maxMoney || Infinity);
