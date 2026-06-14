@@ -16,15 +16,15 @@ const STORE_CONFIG = {
 
   // Angka unik checkout. Contoh subtotal 24.000 + 12 = 24.012
   uniqueNumber: {
-    min: 11,
-    max: 99
+    min: 1,
+    max: 10
   },
 
   // Katalog Token Grow A Garden.
   // 1 token = Rp17.5, hasil token dibulatkan ke bawah supaya tidak ada koma.
   tokenCatalog: {
     enabled: true,
-    pricePerToken: 17,
+    pricePerToken: 16,
     minMoney: 1000,
     maxMoney: 10000000,
     quickAmounts: [5000, 10000, 25000, 50000, 100000]
