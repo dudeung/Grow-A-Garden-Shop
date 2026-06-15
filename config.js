@@ -12,7 +12,7 @@ const STORE_CONFIG = {
   privateServerLink: "https://www.roblox.com/share?code=4551afc705de384cb710734a3b3ba758&type=Server",
 
   // Ganti file QRIS di folder assets/payment lalu ubah path ini kalau namanya beda.
-  qrisImage: "assets/payment/qris-placeholder.svg",
+  qrisImage: "assets/payment/qris-placeholder.jpg",
 
   // Angka unik checkout. Contoh subtotal 24.000 + 12 = 24.012
   uniqueNumber: {
